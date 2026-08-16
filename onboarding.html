@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Începe procesul — Vio Bulz Coaching</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero small">
+ <div class="container hero-inner">
+  <div class="kicker">Vio Bulz Coaching</div>
+  <h1>ALEGE-ȚI <span>PROCESUL.</span></h1>
+  <p>Completează formularul. După trimitere, discutăm obiectivul tău și următorul pas.</p>
+ </div>
+</header>
+
+<section>
+ <div class="container form-wrap">
+  <div class="kicker">Onboarding</div>
+  <h2 class="section-title">Evaluarea <span>inițială</span></h2>
+  <p class="lead">Completează cât mai corect. Informațiile ne ajută să înțelegem punctul tău de plecare.</p>
+
+  <form id="onboardingForm">
+   <label>Nume și prenume<input required name="name" type="text"></label>
+   <label>Email<input required name="email" type="email"></label>
+   <label>Telefon<input required name="phone" type="tel"></label>
+   <label>Pachet dorit
+    <select id="package" name="package" required>
+      <option value="">Alege pachetul</option>
+      <option value="BASIC — 500 LEI / LUNĂ">BASIC — 500 LEI / LUNĂ</option>
+      <option value="TRANSFORM — 800 LEI / LUNĂ">TRANSFORM — 800 LEI / LUNĂ</option>
+      <option value="PREMIUM — 1.000 LEI / LUNĂ">PREMIUM — 1.000 LEI / LUNĂ</option>
+      <option value="TRANSFORM — 3 LUNI — 2.000 LEI">TRANSFORM — 3 LUNI — 2.000 LEI</option>
+      <option value="GYM BRO WEEK — 4 ANTRENAMENTE GRATUITE">GYM BRO WEEK — 4 ANTRENAMENTE GRATUITE</option>
+     </select>
+   </label>
+   <label>Obiectivul tău<textarea required name="goal"></textarea></label>
+   <label>Nivel de experiență
+    <select name="experience">
+      <option>Începător</option><option>Intermediar</option><option>Avansat</option>
+    </select>
+   </label>
+   <label>Unde vrei să lucrăm?
+    <select name="format"><option>ONLINE</option><option>FIZIC</option><option>ONLINE & FIZIC</option></select>
+   </label>
+   <label>Mesaj / informații suplimentare<textarea name="message"></textarea></label>
+   <label class="check"><input required type="checkbox" name="consent"> Sunt de acord să fiu contactat(ă) în legătură cu solicitarea mea.</label>
+   <button class="btn" type="submit">TRIMITE FORMULARUL</button>
+  </form>
+
+  <div id="success" class="success" hidden>
+    <h3>Formular trimis.</h3>
+    <p>Mulțumesc! Datele au fost validate. Când conectăm serviciul de e-mail, notificarea va ajunge automat la adresa configurată.</p>
+    <a class="btn alt" href="index.html">Înapoi la site</a>
+  </div>
+ </div>
+</section>
+
+<footer><div class="container">VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT</div></footer>
+
+<script>
+const form = document.getElementById("onboardingForm");
+const success = document.getElementById("success");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const cfg = window.VIO_CONFIG || {};
+  const endpoint = cfg.formEndpoint || "";
+
+  if (endpoint) {
+    const data = new FormData(form);
+    const response = await fetch(endpoint, {method:"POST", body:data, headers:{Accept:"application/json"}});
+    if (!response.ok) { alert("Formularul nu a putut fi trimis. Verifică endpoint-ul."); return; }
+  }
+  form.hidden = true;
+  success.hidden = false;
+});
+</script>
+<script src="config.js"></script>
+</body>
+</html>
