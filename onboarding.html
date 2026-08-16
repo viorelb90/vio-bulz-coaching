@@ -3,79 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Începe procesul — Vio Bulz Coaching</title>
-<link rel="stylesheet" href="style.css">
+<title>Aplică pentru Vio Bulz Coaching</title>
+<style>
+:root{--bg:#070707;--panel:#111;--text:#f5f5f5;--muted:#aaa;--red:#ff3b14;--line:#2a2a2a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.container{width:min(760px,92%);margin:auto}.top{text-align:center;padding:70px 0 35px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--red);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.3rem,7vw,4.5rem);line-height:.95;margin:16px 0}h1 span{color:var(--red)}
+.lead{color:var(--muted);font-size:1.05rem}.group{margin:0 0 24px}
+form{padding:45px 0 70px}label{display:block;font-weight:800;margin-bottom:8px}
+input,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:14px;border-radius:4px;font-size:1rem}
+textarea{min-height:130px;resize:vertical}.options{display:grid;gap:10px}.option{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);padding:12px}.option input{width:auto}
+.consent{display:flex;gap:10px;align-items:flex-start;color:#aaa;font-size:.9rem}.consent input{width:auto;margin-top:4px}
+button{width:100%;border:0;background:var(--red);color:#fff;font-weight:900;padding:17px;border-radius:4px;font-size:1rem;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+.back{text-align:center;padding-bottom:45px}.back a{color:#fff;text-decoration:none}
+</style>
 </head>
 <body>
-<header class="hero small">
- <div class="container hero-inner">
-  <div class="kicker">Vio Bulz Coaching</div>
-  <h1>ALEGE-ȚI <span>PROCESUL.</span></h1>
-  <p>Completează formularul. După trimitere, discutăm obiectivul tău și următorul pas.</p>
- </div>
-</header>
+<header class="top"><div class="container">
+<div class="kicker">Vio Bulz Coaching</div>
+<h1>APLICĂ PENTRU<br><span>COACHING</span></h1>
+<p class="lead">Completează formularul. Îți analizez răspunsurile și te contactez pentru a discuta obiectivul tău și următorii pași.</p>
+</div></header>
+<main class="container">
+<form action="https://formsubmit.co/viorelbulz90@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nouă aplicație — Vio Bulz Coaching">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_replyto" value="">
+<input type="hidden" name="_next" value="https://viorelb90.github.io/vio-bulz-coaching/multumesc.html">
+<input type="hidden" name="_url" value="https://viorelb90.github.io/vio-bulz-coaching/onboarding.html">
+<input type="hidden" name="_autoresponse" value="Am primit aplicația ta pentru Vio Bulz Coaching. Îți mulțumesc! Voi analiza răspunsurile și te voi contacta pentru următorii pași.">
+<input type="text" name="_honey" style="display:none">
 
-<section>
- <div class="container form-wrap">
-  <div class="kicker">Onboarding</div>
-  <h2 class="section-title">Evaluarea <span>inițială</span></h2>
-  <p class="lead">Completează cât mai corect. Informațiile ne ajută să înțelegem punctul tău de plecare.</p>
+<div class="group"><label for="name">Nume și prenume *</label><input id="name" name="Nume și prenume" required></div>
+<div class="group"><label for="age">Vârsta *</label><input id="age" name="Vârstă" type="number" min="16" max="100" required></div>
+<div class="group"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+<div class="group"><label for="phone">Telefon / WhatsApp *</label><input id="phone" name="Telefon / WhatsApp" type="tel" required></div>
 
-  <form id="onboardingForm">
-   <label>Nume și prenume<input required name="name" type="text"></label>
-   <label>Email<input required name="email" type="email"></label>
-   <label>Telefon<input required name="phone" type="tel"></label>
-   <label>Pachet dorit
-    <select id="package" name="package" required>
-      <option value="">Alege pachetul</option>
-      <option value="BASIC — 500 LEI / LUNĂ">BASIC — 500 LEI / LUNĂ</option>
-      <option value="TRANSFORM — 800 LEI / LUNĂ">TRANSFORM — 800 LEI / LUNĂ</option>
-      <option value="PREMIUM — 1.000 LEI / LUNĂ">PREMIUM — 1.000 LEI / LUNĂ</option>
-      <option value="TRANSFORM — 3 LUNI — 2.000 LEI">TRANSFORM — 3 LUNI — 2.000 LEI</option>
-      <option value="GYM BRO WEEK — 4 ANTRENAMENTE GRATUITE">GYM BRO WEEK — 4 ANTRENAMENTE GRATUITE</option>
-     </select>
-   </label>
-   <label>Obiectivul tău<textarea required name="goal"></textarea></label>
-   <label>Nivel de experiență
-    <select name="experience">
-      <option>Începător</option><option>Intermediar</option><option>Avansat</option>
-    </select>
-   </label>
-   <label>Unde vrei să lucrăm?
-    <select name="format"><option>ONLINE</option><option>FIZIC</option><option>ONLINE & FIZIC</option></select>
-   </label>
-   <label>Mesaj / informații suplimentare<textarea name="message"></textarea></label>
-   <label class="check"><input required type="checkbox" name="consent"> Sunt de acord să fiu contactat(ă) în legătură cu solicitarea mea.</label>
-   <button class="btn" type="submit">TRIMITE FORMULARUL</button>
-  </form>
+<div class="group"><label>Ce tip de coaching te interesează? *</label><div class="options">
+<label class="option"><input type="radio" name="Tip coaching" value="ONLINE" required> ONLINE</label>
+<label class="option"><input type="radio" name="Tip coaching" value="FIZIC"> FIZIC</label>
+<label class="option"><input type="radio" name="Tip coaching" value="ONLINE + FIZIC"> ONLINE + FIZIC</label>
+</div></div>
 
-  <div id="success" class="success" hidden>
-    <h3>Formular trimis.</h3>
-    <p>Mulțumesc! Datele au fost validate. Când conectăm serviciul de e-mail, notificarea va ajunge automat la adresa configurată.</p>
-    <a class="btn alt" href="index.html">Înapoi la site</a>
-  </div>
- </div>
-</section>
+<div class="group"><label for="goal">Care este obiectivul tău principal? *</label>
+<select id="goal" name="Obiectiv principal" required>
+<option value="">Alege o variantă</option><option>Masă musculară</option><option>Slăbire</option>
+<option>Recompunere corporală</option><option>Forță</option><option>Condiție fizică</option><option>Alt obiectiv</option>
+</select></div>
 
-<footer><div class="container">VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT</div></footer>
+<div class="group"><label for="goaltext">Spune-mi mai exact ce vrei să obții. *</label><textarea id="goaltext" name="Obiectiv detaliat" required></textarea></div>
 
+<div class="group"><label for="experience">De cât timp te antrenezi?</label>
+<select id="experience" name="Experiență sală"><option value="">Alege o variantă</option>
+<option>Sunt începător</option><option>Sub 6 luni</option><option>6–12 luni</option><option>1–2 ani</option><option>Peste 2 ani</option></select></div>
+
+<div class="group"><label for="frequency">De câte ori pe săptămână poți să te antrenezi?</label>
+<select id="frequency" name="Frecvență antrenamente"><option value="">Alege o variantă</option>
+<option>2 ori</option><option>3 ori</option><option>4 ori</option><option>5 ori</option><option>6+ ori</option></select></div>
+
+<div class="group"><label>Ce pachet te interesează acum?</label><div class="options">
+<label class="option"><input type="radio" name="Pachet dorit" value="Basic — 500 lei/lună"> Basic — 500 lei/lună</label>
+<label class="option"><input type="radio" name="Pachet dorit" value="Transform — 800 lei/lună"> Transform — 800 lei/lună</label>
+<label class="option"><input type="radio" name="Pachet dorit" value="Premium — 1.000 lei/lună"> Premium — 1.000 lei/lună</label>
+<label class="option"><input type="radio" name="Pachet dorit" value="Transform 3 luni — 2.000 lei"> Transform 3 luni — 2.000 lei</label>
+<label class="option"><input type="radio" name="Pachet dorit" value="Nu știu încă — vreau să discutăm"> Nu știu încă — vreau să discutăm</label>
+</div></div>
+
+<div class="group"><label for="why">De ce vrei să începi coaching-ul acum? *</label><textarea id="why" name="De ce acum" required></textarea></div>
+<div class="group"><label for="coach">Ai mai lucrat cu un antrenor?</label>
+<select id="coach" name="Experiență cu antrenor"><option value="">Alege o variantă</option><option>Da</option><option>Nu</option></select></div>
+<div class="group"><label for="extra">Mai este ceva ce ai vrea să știu înainte să te contactez?</label><textarea id="extra" name="Informații suplimentare"></textarea></div>
+<div class="group consent"><input id="consent" type="checkbox" name="Acord contact" value="Da" required>
+<label for="consent">Sunt de acord ca Vio Bulz Coaching să mă contacteze în legătură cu această solicitare.</label></div>
+<button type="submit">Trimite aplicația</button>
+</form>
+<div class="back"><a href="index.html">← Înapoi la Vio Bulz Coaching</a></div>
+</main>
 <script>
-const form = document.getElementById("onboardingForm");
-const success = document.getElementById("success");
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const cfg = window.VIO_CONFIG || {};
-  const endpoint = cfg.formEndpoint || "";
-
-  if (endpoint) {
-    const data = new FormData(form);
-    const response = await fetch(endpoint, {method:"POST", body:data, headers:{Accept:"application/json"}});
-    if (!response.ok) { alert("Formularul nu a putut fi trimis. Verifică endpoint-ul."); return; }
-  }
-  form.hidden = true;
-  success.hidden = false;
+document.getElementById("email").addEventListener("input", function(){
+  document.querySelector('input[name="_replyto"]').value=this.value;
 });
 </script>
-<script src="config.js"></script>
 </body>
 </html>
