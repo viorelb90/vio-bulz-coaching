@@ -31,9 +31,10 @@ button{width:100%;border:0;background:var(--red);color:#fff;font-weight:900;padd
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="true">
 <input type="hidden" name="_replyto" value="">
+<input type="hidden" name="_cc" value="">
 <input type="hidden" name="_next" value="https://viorelb90.github.io/vio-bulz-coaching/multumesc.html">
 <input type="hidden" name="_url" value="https://viorelb90.github.io/vio-bulz-coaching/onboarding.html">
-<input type="hidden" name="_autoresponse" value="Am primit aplicația ta pentru Vio Bulz Coaching. Îți mulțumesc! Voi analiza răspunsurile și te voi contacta pentru următorii pași.">
+<input type="hidden" name="_autoresponse" value="Am primit aplicația ta pentru Vio Bulz Coaching! Îți mulțumesc pentru încredere. Am primit răspunsurile tale și le voi analiza. Te voi contacta pentru a discuta obiectivul tău și următorii pași.">
 <input type="text" name="_honey" style="display:none">
 
 <div class="group"><label for="name">Nume și prenume *</label><input id="name" name="Nume și prenume" required></div>
@@ -84,6 +85,7 @@ button{width:100%;border:0;background:var(--red);color:#fff;font-weight:900;padd
 <script>
 document.getElementById("email").addEventListener("input", function(){
   document.querySelector('input[name="_replyto"]').value=this.value;
+  document.querySelector('input[name="_cc"]').value=this.value;
 });
 </script>
 </body>
