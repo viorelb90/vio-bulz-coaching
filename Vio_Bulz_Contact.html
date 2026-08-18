@@ -1,21 +1,240 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contactează-mă — Vio Bulz Coaching</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contactează-mă – Vio Bulz Coaching</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;background:#070707;color:#fff;font-family:Arial,Helvetica,sans-serif;min-height:100vh}
-.wrap{max-width:700px;margin:auto;padding:55px 20px}.logo{text-align:center;font-weight:900;letter-spacing:3px;font-size:18px}.logo span,h1 span{color:#e31319}
-h1{text-align:center;font-size:48px;line-height:1;margin:25px 0 12px;font-weight:900}.subtitle{text-align:center;color:#aaa;font-size:17px;margin:0 auto 40px;line-height:1.6}
-.contact{display:block;text-decoration:none;color:#fff;background:#111;border:1px solid #333;border-radius:10px;padding:20px 22px;margin:16px 0}.contact:hover{border-color:#e31319}
-.icon{font-size:25px;width:42px;display:inline-block}.label{font-weight:900;font-size:18px}.value{display:block;color:#999;margin-left:45px;margin-top:4px}.back{display:block;text-align:center;margin-top:35px;color:#999;text-decoration:none}
-</style></head>
-<body><main class="wrap">
-<div class="logo">VIO <span>BULZ</span> COACHING</div>
-<h1>CONTACTEAZĂ-<span>MĂ</span></h1>
-<p class="subtitle">Ai o întrebare, vrei mai multe informații despre coaching sau vrei să discutăm despre obiectivul tău? Alege varianta prin care îți este cel mai ușor să mă contactezi.</p>
-<a class="contact" href="https://wa.me/40733202538" target="_blank" rel="noopener"><span class="icon">💬</span><span class="label">WHATSAPP</span><span class="value">Scrie-mi direct pe WhatsApp</span></a>
-<a class="contact" href="mailto:viorelbulz90@gmail.com"><span class="icon">✉️</span><span class="label">EMAIL</span><span class="value">viorelbulz90@gmail.com</span></a>
-<a class="contact" href="https://www.tiktok.com/@vio.bulz8" target="_blank" rel="noopener"><span class="icon">♪</span><span class="label">TIKTOK</span><span class="value">@vio.bulz8 — urmărește-mă pentru conținut și sfaturi</span></a>
-<a class="back" href="index.html">← Înapoi pe site</a>
-</main></body></html>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #070707;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.wrap {
+  max-width: 700px;
+  margin: auto;
+  padding: 55px 20px;
+}
+
+.logo {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.logo span {
+  color: #ff3b19;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 25px 0 12px;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #ff3b19;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 16px 0;
+  transition: 0.2s;
+}
+
+.contact:hover {
+  border-color: #ff3b19;
+}
+
+.icon {
+  font-size: 25px;
+  width: 42px;
+  display: inline-block;
+}
+
+.label {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.value {
+  display: block;
+  margin-left: 46px;
+  margin-top: 6px;
+  color: #999;
+}
+
+form {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 22px;
+  margin: 16px 0;
+}
+
+form h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: #070707;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  background: #ff3b19;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  color: #999;
+  text-decoration: none;
+  margin-top: 25px;
+}
+
+.back:hover {
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+<div class="logo">
+  VIO <span>BULZ</span> COACHING
+</div>
+
+<h1>
+  CONTACTEAZĂ-<span>MĂ</span>
+</h1>
+
+<p class="subtitle">
+  Ai o întrebare, vrei mai multe informații despre coaching
+  sau vrei să discutăm despre obiectivul tău?
+  Alege varianta prin care îți este cel mai ușor să mă contactezi.
+</p>
+
+<a class="contact"
+   href="https://wa.me/40733202538"
+   target="_blank"
+   rel="noopener">
+  <span class="icon">💬</span>
+  <span class="label">WHATSAPP</span>
+  <span class="value">Scrie-mi direct pe WhatsApp</span>
+</a>
+
+<form action="https://formsubmit.co/viorelbulz90@gmail.com" method="POST">
+
+  <h2>📧 TRIMITE-MI UN EMAIL</h2>
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Numele tău"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Adresa ta de email"
+    required
+  >
+
+  <textarea
+    name="message"
+    placeholder="Scrie mesajul tău..."
+    required
+  ></textarea>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Mesaj nou – Vio Bulz Coaching"
+  >
+
+  <input
+    type="hidden"
+    name="_template"
+    value="table"
+  >
+
+  <button type="submit">
+    TRIMITE MESAJUL →
+  </button>
+
+</form>
+
+<a class="contact"
+   href="https://www.tiktok.com/@vio.bulz8"
+   target="_blank"
+   rel="noopener">
+  <span class="icon">♪</span>
+  <span class="label">TIKTOK</span>
+  <span class="value">@vio.bulz8 — urmărește-mă pentru conținut și sfaturi</span>
+</a>
+
+<a class="back" href="index.html">
+  ← Înapoi pe site
+</a>
+
+</main>
+
+</body>
+</html>
