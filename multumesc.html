@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="ro" translate="no"><head><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="ro" translate="no">
+<head>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Mulțumesc — Vio Bulz Coaching</title>
 <style>
 body{margin:0;background:#070707;color:#fff;font-family:Arial,Helvetica,sans-serif;display:grid;place-items:center;min-height:100vh;text-align:center}
 .box{width:min(650px,88%);padding:50px 25px;border:1px solid #2a2a2a;background:#111}
 h1{font-size:clamp(2.2rem,7vw,4rem);margin:0 0 18px}h1 span{color:#ff3b14}
-p{color:#aaa;font-size:1.05rem;line-height:1.6}a{display:inline-block;margin-top:20px;background:#ff3b14;color:#fff;text-decoration:none;padding:15px 24px;font-weight:800}
-</style></head><body><div class="box">
-<h1>APLICAȚIA A FOST <span>TRIMISĂ.</span></h1>
-<p>Mulțumesc! Am primit răspunsurile tale. Te voi contacta pentru următorii pași.</p>
-<a href="index.html">ÎNAPOI LA SITE</a>
-</div></body></html>
+p{color:#aaa;font-size:1.05rem;line-height:1.6}
+a{display:inline-block;margin-top:20px;background:#ff3b14;color:#fff;text-decoration:none;padding:15px 24px;font-weight:800}
+#lang-switcher{position:fixed;top:18px;right:18px;z-index:99999;display:flex;gap:8px}
+#lang-switcher button{background:#111;color:#fff;border:1px solid #333;border-radius:8px;padding:10px 12px;font-weight:900;cursor:pointer}
+#lang-switcher button.active,#lang-switcher button:hover{background:#ff3b14;border-color:#ff3b14}
+@media(max-width:600px){#lang-switcher{top:12px;right:12px}}
+</style>
+</head>
+<body>
+<div id="lang-switcher">
+<button type="button" data-lang="ro">RO</button>
+<button type="button" data-lang="es">ES</button>
+<button type="button" data-lang="en">EN</button>
+</div>
+
+<div class="box">
+<h1><span data-ro="APLICAȚIA A FOST" data-es="LA APLICACIÓN FUE" data-en="YOUR APPLICATION WAS">APLICAȚIA A FOST</span> <span data-ro="TRIMISĂ." data-es="ENVIADA." data-en="SUBMITTED.">TRIMISĂ.</span></h1>
+<p data-ro="Mulțumesc! Am primit răspunsurile tale. Te voi contacta pentru următorii pași."
+   data-es="¡Gracias! He recibido tus respuestas. Me pondré en contacto contigo para los siguientes pasos."
+   data-en="Thank you! I have received your answers. I will contact you regarding the next steps.">Mulțumesc! Am primit răspunsurile tale. Te voi contacta pentru următorii pași.</p>
+<a id="backLink" href="index.html"
+   data-ro="ÎNAPOI LA SITE"
+   data-es="VOLVER AL SITIO"
+   data-en="BACK TO SITE">ÎNAPOI LA SITE</a>
+</div>
+
+<script>
+(function(){
+  function applyLang(lang){
+    if(!["ro","es","en"].includes(lang)) lang="ro";
+    document.documentElement.lang=lang;
+    document.querySelectorAll("[data-ro]").forEach(function(el){
+      el.textContent=el.getAttribute("data-"+lang);
+    });
+    var back=document.getElementById("backLink");
+    back.href="index.html?lang="+lang;
+    document.querySelectorAll("#lang-switcher button").forEach(function(btn){
+      btn.classList.toggle("active",btn.dataset.lang===lang);
+    });
+    localStorage.setItem("vb_lang",lang);
+  }
+
+  var lang=new URLSearchParams(location.search).get("lang")
+    || localStorage.getItem("vb_lang")
+    || "ro";
+
+  document.querySelectorAll("#lang-switcher button").forEach(function(btn){
+    btn.addEventListener("click",function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      applyLang(this.dataset.lang);
+    });
+  });
+
+  applyLang(lang);
+})();
+</script>
+</body>
+</html>
