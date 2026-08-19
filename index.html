@@ -324,330 +324,81 @@ footer{padding:35px 0;text-align:center;color:#777;font-size:.85rem}
 </section>
 <script>
 (function(){
-  const translations = {
-    es: {
-      "CONSTRUIEȘTE-ȚI":"CONSTRUYE TU",
-      "CORPUL.":"CUERPO.",
-      "Construiește-ți disciplina.":"Construye tu disciplina.",
-      "Coaching personalizat":"Coaching personalizado",
-      "ONLINE & FIZIC":"ONLINE Y PRESENCIAL",
-      "construit în jurul obiectivului, stilului tău de viață și progresului tău.":"construido en torno a tu objetivo, tu estilo de vida y tu progreso.",
-      "Vreau să încep":"Quiero empezar",
-      "Despre mine":"Sobre mí",
-      "Membru acreditat FRCF":"Miembro acreditado por la FRCF",
-      "— Federația Română de Culturism și Fitness":"— Federación Rumana de Culturismo y Fitness",
-      "Am învățat să merg din nou.":"Aprendí a caminar de nuevo.",
-      "Acum îi ajut și pe alții să meargă înainte.":"Ahora ayudo a otros a seguir adelante.",
-      "În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.":"En 2019 llegué a uno de los momentos más difíciles de mi vida.",
-      "După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la 65 kg și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.":"Después de un período largo y muy difícil, marcado por depresión y consumo excesivo de alcohol durante aproximadamente dos años, mi salud se deterioró. Llegué a 65 kg y fui ingresado en el Hospital Provincial de Timișoara, en la novena planta, con una forma grave de neuropatía que afectaba a los nervios periféricos.",
-      "Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.":"El dolor era insoportable. Lo sentía en las piernas, desde las puntas de los dedos hasta las caderas. No podía comer. No podía dormir. Apenas podía controlar las piernas.",
-      "Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.":"Un año antes incluso había necesitado una silla de ruedas.",
-      "Au fost zile și nopți pe care nu le voi uita niciodată.":"Hubo días y noches que nunca olvidaré.",
-      "Durerea. Frica. Neputința.":"Dolor. Miedo. Impotencia.",
-      "Primii pași. Apoi mersul. Apoi bicicleta. Apoi exerciții ușoare. Apoi aparatele.":"Los primeros pasos. Después caminar. Después la bicicleta. Después ejercicios ligeros. Después las máquinas.",
-      "Pas cu pas. Zi după zi.":"Paso a paso. Día tras día.",
-      "Dar nu am renunțat.":"Pero no me rendí.",
-      "M-am rugat. M-am forțat. Am continuat.":"Recé. Me esforcé. Seguí adelante.",
-      "Urmărește-mă pe TikTok":"Sígueme en TikTok",
-      "Metoda":"Método",
-      "Ce este Vio Bulz":"¿Qué es Vio Bulz",
-      "Coaching?":"Coaching?",
-      "Evaluare":"Evaluación",
-      "Plan":"Plan",
-      "Execuție":"Ejecución",
-      "Ajustare":"Ajuste",
-      "Progres":"Progreso",
-      "Ofertă pentru clienți noi":"Oferta para nuevos clientes",
-      "4 ANTRENAMENTE GRATUITE":"4 ENTRENAMIENTOS GRATIS",
-      "Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.":"Ven a conocerme, entrenemos juntos y comprueba si mi estilo de coaching es adecuado para ti.",
-      "Vreau Gym Bro Week":"Quiero Gym Bro Week",
-      "Coaching":"Coaching",
-      "Alege pachet":"Elegir paquete",
-      "Alege pachetul":"Elige el paquete",
-      "potrivit pentru tine":"adecuado para ti",
-      "Toate pachetele sunt disponibile pentru coaching":"Todos los paquetes están disponibles para coaching",
-      "LEI / LUNĂ":"€ / MES",
-      "LEI / 3 LUNI":"€ / 3 MESES",
-      "Evaluare inițială":"Evaluación inicial",
-      "Program personalizat":"Programa personalizado",
-      "Strategie alimentară":"Estrategia nutricional",
-      "Check-in săptămânal":"Check-in semanal",
-      "Suport prin mesaje":"Soporte por mensajes",
-      "Tot ce include Basic":"Todo lo incluido en Basic",
-      "Analiză aprofundată":"Análisis en profundidad",
-      "Ajustări regulate":"Ajustes periódicos",
-      "Analiză video":"Análisis de vídeo",
-      "Obiective săptămânale":"Objetivos semanales",
-      "Suport prioritar":"Soporte prioritario",
-      "Tot ce include Transform":"Todo lo incluido en Transform",
-      "Contact prioritar":"Contacto prioritario",
-      "Analiză tehnică aprofundată":"Análisis técnico en profundidad",
-      "Monitorizare atentă":"Seguimiento cercano",
-      "Ajustări rapide când sunt justificate":"Ajustes rápidos cuando están justificados",
-      "Reevaluări periodice":"Reevaluaciones periódicas",
-      "Experiență Transform":"Experiencia Transform",
-      "Planificare pe termen mai lung":"Planificación a más largo plazo",
-      "Monitorizare pe 3 luni":"Seguimiento durante 3 meses",
-      "Ajustări pe parcurs":"Ajustes durante el proceso",
-      "Economisești 400 lei":"Ahorras 400 lei",
-      "Cel mai bun preț":"Mejor precio",
-      "Transformarea ta începe acum":"Tu transformación empieza ahora",
-      "REZULTATELE":"LOS RESULTADOS",
-      "VORBESC.":"HABLAN.",
-      "Vrei să vezi":"¿Quieres ver",
-      "rezultate reale, rezumate și îndrumări":"resultados reales, resúmenes y orientación",
-      "care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.":"que pueden ayudarte? Sígueme en TikTok para ver contenido diario, transformaciones, entrenamientos y consejos prácticos.",
-      "URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8":"SÍGUEME EN TIKTOK → @vio.bulz8",
-      "VREI SĂ":"¿QUIERES",
-      "AFLI MAI MULTE?":"SABER MÁS?",
-      "Îndrumare și informații despre antrenament":"Orientación e información sobre entrenamiento",
-      "Discuții despre nutriție și progres":"Conversaciones sobre nutrición y progreso",
-      "Informații despre coaching online și fizic":"Información sobre coaching online y presencial",
-      "Răspunsuri direct de la Vio Bulz":"Respuestas directamente de Vio Bulz",
-      "CONTACT →":"CONTACTO →",
-      "REZULTATE REALE":"RESULTADOS REALES",
-      "Transformări autentice și progres.":"Transformaciones auténticas y progreso.",
-      "ÎNDRUMARE CORECTĂ":"ORIENTACIÓN CORRECTA",
-      "Informații clare și aplicate.":"Información clara y práctica.",
-      "OBIECTIVE ATINSE":"OBJETIVOS ALCANZADOS",
-      "Cu plan, disciplină și consecvență.":"Con planificación, disciplina y constancia.",
-      "— COACHING & ÎNDRUMARE":"— COACHING Y ORIENTACIÓN",
-      "Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.":"¿Quieres ver más resultados, transformaciones y consejos prácticos? Sígueme en TikTok o contáctame directamente.",
-      "Întrebări":"Preguntas",
-      "frecvente":"frecuentes",
-      "Pot face coaching dacă sunt începător?":"¿Puedo hacer coaching si soy principiante?",
-      "Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.":"Sí. El plan se adapta a tu nivel inicial y a tu objetivo.",
-      "Pot face coaching online?":"¿Puedo hacer coaching online?",
-      "Da. Coaching-ul este disponibil atât online, cât și fizic.":"Sí. El coaching está disponible online y presencialmente.",
-      "Trebuie să țin o dietă strictă?":"¿Tengo que seguir una dieta estricta?",
-      "Strategia alimentară este adaptată obiectivului și stilului tău de viață.":"La estrategia nutricional se adapta a tu objetivo y a tu estilo de vida.",
-      "Cât durează până văd rezultate?":"¿Cuánto tardaré en ver resultados?",
-      "Cum încep?":"¿Cómo empiezo?",
-      "Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.":"Completas la evaluación, hablamos de tu objetivo y elegimos juntos la opción de coaching adecuada.",
-      "EȘTI PREGĂTIT":"¿ESTÁS PREPARADO",
-      "SĂ ÎNCEPI?":"PARA EMPEZAR?",
-      "Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.":"No necesitas estar ya en forma. Solo necesitas estar preparado para empezar.",
-      "GHIDUL COMPLET DE FITNESS & COACHING":"GUÍA COMPLETA DE FITNESS Y COACHING",
-      "Antrenament • Nutriție • Anatomie • Coaching":"Entrenamiento • Nutrición • Anatomía • Coaching",
-      "CUMPĂRĂ GHIDUL":"COMPRAR LA GUÍA",
-      "VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT":"VIO BULZ COACHING • ONLINE • PRESENCIAL • PERSONALIZADO",
-      "VIO BULZ COACHING - PACHETE":"VIO BULZ COACHING - PAQUETES",
-      "VEZI PACHETELE DE COACHING":"VER PAQUETES DE COACHING"
-    },
-    en: {
-      "CONSTRUIEȘTE-ȚI":"BUILD YOUR",
-      "CORPUL.":"BODY.",
-      "Construiește-ți disciplina.":"Build your discipline.",
-      "Coaching personalizat":"Personalized coaching",
-      "ONLINE & FIZIC":"ONLINE & IN-PERSON",
-      "construit în jurul obiectivului, stilului tău de viață și progresului tău.":"built around your goals, lifestyle and progress.",
-      "Vreau să încep":"I want to start",
-      "Despre mine":"About me",
-      "Membru acreditat FRCF":"FRCF accredited member",
-      "— Federația Română de Culturism și Fitness":"— Romanian Bodybuilding and Fitness Federation",
-      "Am învățat să merg din nou.":"I learned to walk again.",
-      "Acum îi ajut și pe alții să meargă înainte.":"Now I help others move forward.",
-      "În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.":"In 2019, I reached one of the hardest moments of my life.",
-      "După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la 65 kg și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.":"After a long and very difficult period marked by depression and excessive alcohol use for about two years, my health collapsed. I reached 65 kg and was hospitalized at the County Hospital in Timișoara, on the 9th floor, with a severe form of neuropathy affecting my peripheral nerves.",
-      "Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.":"The pain was unbearable. I felt it in my legs, from my toes up toward my hips. I could not eat. I could not sleep. I could barely control my legs.",
-      "Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.":"A year earlier, I had even needed a wheelchair.",
-      "Au fost zile și nopți pe care nu le voi uita niciodată.":"There were days and nights I will never forget.",
-      "Durerea. Frica. Neputința.":"Pain. Fear. Helplessness.",
-      "Primii pași. Apoi mersul. Apoi bicicleta. Apoi exerciții ușoare. Apoi aparatele.":"First steps. Then walking. Then cycling. Then light exercises. Then machines.",
-      "Pas cu pas. Zi după zi.":"Step by step. Day by day.",
-      "Dar nu am renunțat.":"But I did not give up.",
-      "M-am rugat. M-am forțat. Am continuat.":"I prayed. I pushed myself. I kept going.",
-      "Urmărește-mă pe TikTok":"Follow me on TikTok",
-      "Metoda":"Method",
-      "Ce este Vio Bulz":"What is Vio Bulz",
-      "Coaching?":"Coaching?",
-      "Evaluare":"Assessment",
-      "Plan":"Plan",
-      "Execuție":"Execution",
-      "Ajustare":"Adjustment",
-      "Progres":"Progress",
-      "Ofertă pentru clienți noi":"New client offer",
-      "4 ANTRENAMENTE GRATUITE":"4 FREE WORKOUTS",
-      "Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.":"Come meet me, train side by side with me, and see whether my coaching style is right for you.",
-      "Vreau Gym Bro Week":"I want Gym Bro Week",
-      "Coaching":"Coaching",
-      "Alege pachet":"Choose package",
-      "Alege pachetul":"Choose the package",
-      "potrivit pentru tine":"that fits you",
-      "Toate pachetele sunt disponibile pentru coaching":"All packages are available for coaching",
-      "LEI / LUNĂ":"LEI / MONTH",
-      "LEI / 3 LUNI":"LEI / 3 MONTHS",
-      "Evaluare inițială":"Initial assessment",
-      "Program personalizat":"Personalized program",
-      "Strategie alimentară":"Nutrition strategy",
-      "Check-in săptămânal":"Weekly check-in",
-      "Suport prin mesaje":"Message support",
-      "Tot ce include Basic":"Everything in Basic",
-      "Analiză aprofundată":"In-depth analysis",
-      "Ajustări regulate":"Regular adjustments",
-      "Analiză video":"Video analysis",
-      "Obiective săptămânale":"Weekly goals",
-      "Suport prioritar":"Priority support",
-      "Tot ce include Transform":"Everything in Transform",
-      "Contact prioritar":"Priority contact",
-      "Analiză tehnică aprofundată":"In-depth technique analysis",
-      "Monitorizare atentă":"Close monitoring",
-      "Ajustări rapide când sunt justificate":"Fast adjustments when justified",
-      "Reevaluări periodice":"Periodic reassessments",
-      "Experiență Transform":"Transform experience",
-      "Planificare pe termen mai lung":"Longer-term planning",
-      "Monitorizare pe 3 luni":"3-month monitoring",
-      "Ajustări pe parcurs":"Adjustments along the way",
-      "Economisești 400 lei":"Save 400 lei",
-      "Cel mai bun preț":"Best value",
-      "Transformarea ta începe acum":"Your transformation starts now",
-      "REZULTATELE":"RESULTS",
-      "VORBESC.":"SPEAK.",
-      "Vrei să vezi":"Want to see",
-      "rezultate reale, rezumate și îndrumări":"real results, summaries and guidance",
-      "care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.":"that can help you? Follow me on TikTok for daily content, transformations, workouts and practical tips.",
-      "URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8":"FOLLOW ME ON TIKTOK → @vio.bulz8",
-      "VREI SĂ":"WANT TO",
-      "AFLI MAI MULTE?":"KNOW MORE?",
-      "Îndrumare și informații despre antrenament":"Training guidance and information",
-      "Discuții despre nutriție și progres":"Nutrition and progress discussions",
-      "Informații despre coaching online și fizic":"Online and in-person coaching information",
-      "Răspunsuri direct de la Vio Bulz":"Answers directly from Vio Bulz",
-      "CONTACT →":"CONTACT →",
-      "REZULTATE REALE":"REAL RESULTS",
-      "Transformări autentice și progres.":"Authentic transformations and progress.",
-      "ÎNDRUMARE CORECTĂ":"PROPER GUIDANCE",
-      "Informații clare și aplicate.":"Clear, practical information.",
-      "OBIECTIVE ATINSE":"GOALS ACHIEVED",
-      "Cu plan, disciplină și consecvență.":"With planning, discipline and consistency.",
-      "— COACHING & ÎNDRUMARE":"— COACHING & GUIDANCE",
-      "Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.":"Want to see more results, transformations and practical tips? Follow me on TikTok or contact me directly.",
-      "Întrebări":"Frequently",
-      "frecvente":"Asked Questions",
-      "Pot face coaching dacă sunt începător?":"Can I do coaching if I am a beginner?",
-      "Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.":"Yes. The plan is built around your starting level and your goal.",
-      "Pot face coaching online?":"Can I do online coaching?",
-      "Da. Coaching-ul este disponibil atât online, cât și fizic.":"Yes. Coaching is available both online and in person.",
-      "Trebuie să țin o dietă strictă?":"Do I need to follow a strict diet?",
-      "Strategia alimentară este adaptată obiectivului și stilului tău de viață.":"The nutrition strategy is adapted to your goal and lifestyle.",
-      "Cât durează până văd rezultate?":"How long until I see results?",
-      "Cum încep?":"How do I start?",
-      "Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.":"You complete the assessment, we discuss your goal and choose the right coaching option together.",
-      "EȘTI PREGĂTIT":"ARE YOU READY",
-      "SĂ ÎNCEPI?":"TO START?",
-      "Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.":"You do not need to be in shape already. You just need to be ready to start.",
-      "GHIDUL COMPLET DE FITNESS & COACHING":"THE COMPLETE FITNESS & COACHING GUIDE",
-      "Antrenament • Nutriție • Anatomie • Coaching":"Training • Nutrition • Anatomy • Coaching",
-      "CUMPĂRĂ GHIDUL":"BUY THE GUIDE",
-      "VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT":"VIO BULZ COACHING • ONLINE • IN-PERSON • PERSONALIZED",
-      "VIO BULZ COACHING - PACHETE":"VIO BULZ COACHING - PACKAGES",
-      "VEZI PACHETELE DE COACHING":"VIEW COACHING PACKAGES"
-    }
-  };
-
-  const original = new Map();
-
-  // Save every visible text node exactly as it is in Romanian.
+  const translations = {"es":{"Vio Bulz Coaching":"Vio Bulz Coaching","CONSTRUIEȘTE-ȚI":"CONSTRUYE TU","CORPUL.":"CUERPO.","Construiește-ți disciplina.":"Construye tu disciplina.","Coaching personalizat":"Coaching personalizado","ONLINE & FIZIC":"ONLINE Y PRESENCIAL",", construit în jurul obiectivului, stilului tău de viață și progresului tău.":", construido en torno a tu objetivo, tu estilo de vida y tu progreso.","Vreau să încep":"Quiero empezar","Despre mine":"Sobre mí","Membru acreditat FRCF":"Miembro acreditado por la FRCF","— Federația Română de Culturism și Fitness":"— Federación Rumana de Culturismo y Fitness","Am învățat să merg din nou.":"Aprendí a caminar de nuevo.","Acum îi ajut și pe alții să meargă înainte.":"Ahora ayudo a otros a seguir adelante.","În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.":"En 2019 llegué a uno de los momentos más difíciles de mi vida.","După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la":"Después de un período largo y muy difícil, marcado por la depresión y el consumo excesivo de alcohol durante aproximadamente dos años, mi salud se deterioró por completo. Llegué a","65 kg":"65 kg","și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.":"y fui hospitalizado en el Hospital del Condado de Timișoara, en la novena planta, con una forma grave de neuropatía que afectaba a los nervios periféricos.","Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.":"El dolor era insoportable. Lo sentía en las piernas, desde las puntas de los dedos de los pies hasta las caderas. No podía comer. No podía dormir. Apenas podía controlar las piernas.","Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.":"Un año antes incluso había necesitado una silla de ruedas.","Au fost zile și nopți pe care nu le voi uita niciodată.":"Hubo días y noches que nunca olvidaré.","Urletele mele de durere se auzeau pe tot palierul de la etajul 9, unde erau zeci de camere. Durerea devenise atât de puternică încât, uneori, singurul lucru pe care îl mai puteam face era să strig.":"Mis gritos de dolor se oían por todo el pasillo de la novena planta, donde había decenas de habitaciones. El dolor se había vuelto tan intenso que, a veces, lo único que podía hacer era gritar.","Asistentele veneau la mine și îmi administrau tratamentul pentru a mă seda, astfel încât să pot adormi câteva ore și, pentru puțin timp, să uit de durere.":"Las enfermeras venían a verme y me administraban el tratamiento para sedarme, de modo que pudiera dormir unas horas y, durante un tiempo, olvidar el dolor.","Apoi mă trezeam și totul începea din nou.":"Después me despertaba y todo empezaba de nuevo.","Durerea. Frica. Neputința.":"El dolor. El miedo. La impotencia.","Și totuși, undeva în mijlocul acelei suferințe, am început să-mi construiesc cea mai puternică ambiție pe care am avut-o vreodată.":"Y, sin embargo, en medio de aquel sufrimiento, empecé a construir la ambición más fuerte que había tenido jamás.","„Dacă ies de aici,":"«Si salgo de aquí,","mă voi ridica.":"me levantaré.","Îmi voi reconstrui corpul, îmi voi reconstrui mintea și mă voi întoarce pe culmile sportului.”":"reconstruiré mi cuerpo, reconstruiré mi mente y volveré a la cima del deporte.»","Nu știam cât va dura. Nu știam dacă voi reuși. Știam doar că nu voiam ca povestea mea să se termine într-un pat de spital.":"No sabía cuánto duraría. No sabía si lo conseguiría. Solo sabía que no quería que mi historia terminara en una cama de hospital.","După aproape trei săptămâni de spitalizare și după o perioadă extrem de grea de tratament și recuperare, am ieșit din spital cu șanse minime și am început să reconstruiesc totul de la zero.":"Después de casi tres semanas de hospitalización y de un período extremadamente difícil de tratamiento y recuperación, salí del hospital con pocas probabilidades y empecé a reconstruirlo todo desde cero.","Am învățat să":"Aprendí a","merg din nou.":"caminar de nuevo.","Primii pași. Apoi mersul. Apoi bicicleta. Apoi exerciții ușoare. Apoi aparatele.":"Los primeros pasos. Después caminar. Después la bicicleta. Después ejercicios ligeros. Después las máquinas.","Pas cu pas. Zi după zi.":"Paso a paso. Día tras día.","A fost un drum lung, cu durere, frică, frustrare și momente în care ar fi fost mult mai ușor să renunț.":"Fue un camino largo, con dolor, miedo, frustración y momentos en los que habría sido mucho más fácil rendirme.","Dar nu am renunțat.":"Pero no me rendí.","M-am rugat. M-am forțat. Am continuat.":"Recé. Me esforcé. Seguí adelante.","Am început să-mi recapăt controlul asupra picioarelor, să-mi reconstruiesc forța și să-mi recâștig încrederea în propriul corp.":"Empecé a recuperar el control de mis piernas, a reconstruir mi fuerza y a recuperar la confianza en mi propio cuerpo.","Mi-am antrenat corpul, dar înainte de toate mi-am antrenat":"Entrené mi cuerpo, pero antes que nada entrené","mintea să creadă că pot.":"mi mente para creer que podía.","Ceea ce părea imposibil a început, încetul cu încetul, să devină realitate.":"Lo que parecía imposible empezó, poco a poco, a hacerse realidad.","Astăzi sunt sănătos, puternic și mă antrenez la un nivel la care, în acea perioadă, nici măcar nu îndrăzneam să visez.":"Hoy estoy sano, fuerte y entreno a un nivel que, en aquella época, ni siquiera me atrevía a soñar.","Medicii care m-au urmărit au fost surprinși de evoluția mea, iar recuperarea mea a fost considerată deosebită.":"Los médicos que siguieron mi evolución quedaron sorprendidos por mi progreso y mi recuperación fue considerada excepcional.","Am fost la pământ. Am învățat să mă ridic. Acum vreau să-i ajut și pe alții să facă același lucru.":"Estuve en el suelo. Aprendí a levantarme. Ahora quiero ayudar a otros a hacer lo mismo.","Urmărește-mă pe TikTok":"Sígueme en TikTok","@vio.bulz8":"@vio.bulz8","Metoda":"Método","Ce este Vio Bulz":"¿Qué es Vio Bulz","Coaching?":"Coaching?","Nu este un program generic trimis pe WhatsApp. Este un proces de coaching personalizat în care analizăm punctul de plecare, stabilim obiectivul, construim antrenamentul și strategia alimentară, urmărim progresul și ajustăm planul pe parcurs.":"No es un programa genérico enviado por WhatsApp. Es un proceso de coaching personalizado en el que analizamos tu punto de partida, establecemos el objetivo, construimos el entrenamiento y la estrategia nutricional, seguimos el progreso y ajustamos el plan durante el proceso.","01":"01","Evaluare":"Evaluación","02":"02","Plan":"Plan","03":"03","Execuție":"Ejecución","04":"04","Check-in":"Check-in","05":"05","Ajustare":"Ajuste","06":"06","Progres":"Progreso","Ofertă pentru clienți noi":"Oferta para nuevos clientes","GYM BRO":"GYM BRO","WEEK":"SEMANA","4 ANTRENAMENTE GRATUITE":"4 ENTRENAMIENTOS GRATIS","Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.":"Ven a conocerme, entrenemos juntos y comprueba si mi estilo de coaching es adecuado para ti.","Vreau Gym Bro Week":"Quiero Gym Bro Week","Coaching":"Coaching","Alege pachetul":"Elige el paquete","potrivit pentru tine":"adecuado para ti","Toate pachetele sunt disponibile pentru coaching":"Todos los paquetes están disponibles para coaching",".":".","Basic":"Basic","500":"500","LEI / LUNĂ":"€ / MES","Evaluare inițială":"Evaluación inicial","Program personalizat":"Programa personalizado","Strategie alimentară":"Estrategia nutricional","Check-in săptămânal":"Check-in semanal","Suport prin mesaje":"Soporte por mensajes","Alege pachet":"Elegir paquete","Transform ⭐":"Transform ⭐","800":"800","Tot ce include Basic":"Todo lo incluido en Basic","Analiză aprofundată":"Análisis en profundidad","Ajustări regulate":"Ajustes periódicos","Analiză video":"Análisis de vídeo","Obiective săptămânale":"Objetivos semanales","Suport prioritar":"Soporte prioritario","Premium":"Premium","1.000":"1.000","Tot ce include Transform":"Todo lo incluido en Transform","Contact prioritar":"Contacto prioritario","Analiză tehnică aprofundată":"Análisis técnico en profundidad","Monitorizare atentă":"Seguimiento cercano","Ajustări rapide când sunt justificate":"Ajustes rápidos cuando están justificados","Reevaluări periodice":"Reevaluaciones periódicas","Transform 3 luni":"Transform 3 meses","2.000":"2.000","LEI / 3 LUNI":"€ / 3 MESES","Experiență Transform":"Experiencia Transform","Planificare pe termen mai lung":"Planificación a más largo plazo","Monitorizare pe 3 luni":"Seguimiento durante 3 meses","Ajustări pe parcurs":"Ajustes durante el proceso","Economisești 400 lei":"Ahorras 400 lei","Cel mai bun preț":"Mejor precio","Transformarea ta începe acum":"Tu transformación empieza ahora","REZULTATELE":"LOS RESULTADOS","VORBESC.":"HABLAN.","Vrei să vezi":"¿Quieres ver","rezultate reale, rezumate și îndrumări":"resultados reales, resúmenes y orientación","care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.":"que pueden ayudarte? Sígueme en TikTok para contenido diario, transformaciones, entrenamientos y consejos prácticos.","URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8":"SÍGUEME EN TIKTOK → @vio.bulz8","VREI SĂ":"¿QUIERES","AFLI MAI MULTE?":"SABER MÁS?","Pentru rezultate, îndrumare și informații despre coaching, mă poți contacta direct. Îți răspund și te ajut să alegi cea mai potrivită variantă pentru obiectivul tău.":"Para obtener resultados, orientación e información sobre coaching, puedes contactarme directamente. Te responderé y te ayudaré a elegir la opción más adecuada para tu objetivo.","Îndrumare și informații despre antrenament":"Orientación e información sobre entrenamiento","Discuții despre nutriție și progres":"Conversaciones sobre nutrición y progreso","Informații despre coaching online și fizic":"Información sobre coaching online y presencial","Răspunsuri direct de la Vio Bulz":"Respuestas directamente de Vio Bulz","CONTACT →":"CONTACTO →","REZULTATE REALE":"RESULTADOS REALES","Transformări autentice și progres.":"Transformaciones auténticas y progreso.","ÎNDRUMARE CORECTĂ":"ORIENTACIÓN CORRECTA","Informații clare și aplicate.":"Información clara y práctica.","OBIECTIVE ATINSE":"OBJETIVOS ALCANZADOS","Cu plan, disciplină și consecvență.":"Con planificación, disciplina y constancia.","VIO BULZ":"VIO BULZ","— COACHING & ÎNDRUMARE":"— COACHING Y ORIENTACIÓN","Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.":"¿Quieres ver más resultados, transformaciones y consejos prácticos? Sígueme en TikTok o contáctame directamente.","FAQ":"FAQ","Întrebări":"Preguntas","frecvente":"frecuentes","Pot face coaching dacă sunt începător?":"¿Puedo hacer coaching si soy principiante?","Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.":"Sí. El plan se adapta a tu nivel inicial y a tu objetivo.","Pot face coaching online?":"¿Puedo hacer coaching online?","Da. Coaching-ul este disponibil atât online, cât și fizic.":"Sí. El coaching está disponible online y presencialmente.","Trebuie să țin o dietă strictă?":"¿Tengo que seguir una dieta estricta?","Strategia alimentară este adaptată obiectivului și stilului tău de viață.":"La estrategia nutricional se adapta a tu objetivo y a tu estilo de vida.","Cât durează până văd rezultate?":"¿Cuánto tardaré en ver resultados?","Depinde de punctul de plecare, obiectiv și consecvență. Nu există o durată universală.":"Depende del punto de partida, del objetivo y de la constancia. No existe una duración universal.","Cum încep?":"¿Cómo empiezo?","Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.":"Completas la evaluación, hablamos de tu objetivo y elegimos juntos la opción de coaching adecuada.","EȘTI PREGĂTIT":"¿ESTÁS PREPARADO","SĂ ÎNCEPI?":"PARA EMPEZAR?","Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.":"No necesitas estar ya en forma. Solo necesitas estar preparado para empezar.","GHIDUL COMPLET DE FITNESS & COACHING":"GUÍA COMPLETA DE FITNESS Y COACHING","GHIDUL COMPLET DE":"GUÍA COMPLETA DE","FITNESS & COACHING":"FITNESS Y COACHING","Antrenament • Nutriție • Anatomie • Coaching":"Entrenamiento • Nutrición • Anatomía • Coaching","Un ghid practic pentru cei care vor să-și construiască un corp puternic, sănătos și echilibrat, cu informații clare și aplicabile despre antrenament, nutriție, anatomie și coaching.":"Una guía práctica para quienes quieren construir un cuerpo fuerte, saludable y equilibrado, con información clara y aplicable sobre entrenamiento, nutrición, anatomía y coaching.","55 LEI":"55 €","CUMPĂRĂ GHIDUL":"COMPRAR LA GUÍA","VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT":"VIO BULZ COACHING • ONLINE • PRESENCIAL • PERSONALIZADO","Membru acreditat FRCF — Federația Română de Culturism și Fitness":"Miembro acreditado por la FRCF — Federación Rumana de Culturismo y Fitness","TikTok:":"TikTok:","VIO BULZ COACHING - PACHETE":"VIO BULZ COACHING - PAQUETES","VEZI PACHETELE DE COACHING":"VER PAQUETES DE COACHING"},"en":{"Vio Bulz Coaching":"Vio Bulz Coaching","CONSTRUIEȘTE-ȚI":"BUILD YOUR","CORPUL.":"BODY.","Construiește-ți disciplina.":"Build your discipline.","Coaching personalizat":"Personalized coaching","ONLINE & FIZIC":"ONLINE & IN-PERSON",", construit în jurul obiectivului, stilului tău de viață și progresului tău.":", built around your goals, lifestyle and progress.","Vreau să încep":"I want to start","Despre mine":"About me","Membru acreditat FRCF":"FRCF accredited member","— Federația Română de Culturism și Fitness":"— Romanian Bodybuilding and Fitness Federation","Am învățat să merg din nou.":"I learned to walk again.","Acum îi ajut și pe alții să meargă înainte.":"Now I help others move forward.","În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.":"In 2019, I reached one of the hardest moments of my life.","După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la":"After a long and very difficult period marked by depression and excessive alcohol use for about two years, my health collapsed. I reached","65 kg":"65 kg","și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.":"and was hospitalized at the County Hospital in Timișoara, on the 9th floor, with a severe form of neuropathy affecting my peripheral nerves.","Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.":"The pain was unbearable. I felt it in my legs, from my toes up toward my hips. I could not eat. I could not sleep. I could barely control my legs.","Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.":"A year earlier, I had even needed a wheelchair.","Au fost zile și nopți pe care nu le voi uita niciodată.":"There were days and nights I will never forget.","Urletele mele de durere se auzeau pe tot palierul de la etajul 9, unde erau zeci de camere. Durerea devenise atât de puternică încât, uneori, singurul lucru pe care îl mai puteam face era să strig.":"My cries of pain could be heard throughout the 9th-floor corridor, where there were dozens of rooms. The pain became so intense that sometimes the only thing I could do was scream.","Asistentele veneau la mine și îmi administrau tratamentul pentru a mă seda, astfel încât să pot adormi câteva ore și, pentru puțin timp, să uit de durere.":"The nurses came to me and administered treatment to sedate me, so I could sleep for a few hours and, for a short time, forget the pain.","Apoi mă trezeam și totul începea din nou.":"Then I woke up and everything started again.","Durerea. Frica. Neputința.":"The pain. The fear. The helplessness.","Și totuși, undeva în mijlocul acelei suferințe, am început să-mi construiesc cea mai puternică ambiție pe care am avut-o vreodată.":"And yet, somewhere in the middle of that suffering, I began building the strongest ambition I had ever had.","„Dacă ies de aici,":"“If I get out of here,","mă voi ridica.":"I will rise.","Îmi voi reconstrui corpul, îmi voi reconstrui mintea și mă voi întoarce pe culmile sportului.”":"I will rebuild my body, rebuild my mind and return to the top of the sport.”","Nu știam cât va dura. Nu știam dacă voi reuși. Știam doar că nu voiam ca povestea mea să se termine într-un pat de spital.":"I did not know how long it would take. I did not know if I would succeed. I only knew I did not want my story to end in a hospital bed.","După aproape trei săptămâni de spitalizare și după o perioadă extrem de grea de tratament și recuperare, am ieșit din spital cu șanse minime și am început să reconstruiesc totul de la zero.":"After almost three weeks in the hospital and an extremely difficult period of treatment and recovery, I left the hospital with very little hope and began rebuilding everything from zero.","Am învățat să":"I learned to","merg din nou.":"walk again.","Primii pași. Apoi mersul. Apoi bicicleta. Apoi exerciții ușoare. Apoi aparatele.":"The first steps. Then walking. Then cycling. Then light exercises. Then machines.","Pas cu pas. Zi după zi.":"Step by step. Day after day.","A fost un drum lung, cu durere, frică, frustrare și momente în care ar fi fost mult mai ușor să renunț.":"It was a long road, with pain, fear, frustration and moments when it would have been much easier to give up.","Dar nu am renunțat.":"But I did not give up.","M-am rugat. M-am forțat. Am continuat.":"I prayed. I pushed myself. I kept going.","Am început să-mi recapăt controlul asupra picioarelor, să-mi reconstruiesc forța și să-mi recâștig încrederea în propriul corp.":"I began to regain control of my legs, rebuild my strength and regain confidence in my own body.","Mi-am antrenat corpul, dar înainte de toate mi-am antrenat":"I trained my body, but above all I trained","mintea să creadă că pot.":"my mind to believe I could.","Ceea ce părea imposibil a început, încetul cu încetul, să devină realitate.":"What seemed impossible slowly began to become reality.","Astăzi sunt sănătos, puternic și mă antrenez la un nivel la care, în acea perioadă, nici măcar nu îndrăzneam să visez.":"Today I am healthy, strong and training at a level I did not even dare to dream about back then.","Medicii care m-au urmărit au fost surprinși de evoluția mea, iar recuperarea mea a fost considerată deosebită.":"The doctors who followed my progress were surprised by my development, and my recovery was considered exceptional.","Am fost la pământ. Am învățat să mă ridic. Acum vreau să-i ajut și pe alții să facă același lucru.":"I was at rock bottom. I learned how to rise. Now I want to help others do the same.","Urmărește-mă pe TikTok":"Follow me on TikTok","@vio.bulz8":"@vio.bulz8","Metoda":"Method","Ce este Vio Bulz":"What is Vio Bulz","Coaching?":"Coaching?","Nu este un program generic trimis pe WhatsApp. Este un proces de coaching personalizat în care analizăm punctul de plecare, stabilim obiectivul, construim antrenamentul și strategia alimentară, urmărim progresul și ajustăm planul pe parcurs.":"This is not a generic program sent over WhatsApp. It is a personalized coaching process where we assess your starting point, set the goal, build the training and nutrition strategy, track progress and adjust the plan along the way.","01":"01","Evaluare":"Assessment","02":"02","Plan":"Plan","03":"03","Execuție":"Execution","04":"04","Check-in":"Check-in","05":"05","Ajustare":"Adjustment","06":"06","Progres":"Progress","Ofertă pentru clienți noi":"New client offer","GYM BRO":"GYM BRO","WEEK":"WEEK","4 ANTRENAMENTE GRATUITE":"4 FREE WORKOUTS","Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.":"Come meet me, train side by side with me, and see whether my coaching style is right for you.","Vreau Gym Bro Week":"I want Gym Bro Week","Coaching":"Coaching","Alege pachetul":"Choose the package","potrivit pentru tine":"that fits you","Toate pachetele sunt disponibile pentru coaching":"All packages are available for coaching",".":".","Basic":"Basic","500":"500","LEI / LUNĂ":"€ / MONTH","Evaluare inițială":"Initial assessment","Program personalizat":"Personalized program","Strategie alimentară":"Nutrition strategy","Check-in săptămânal":"Weekly check-in","Suport prin mesaje":"Message support","Alege pachet":"Choose package","Transform ⭐":"Transform ⭐","800":"800","Tot ce include Basic":"Everything in Basic","Analiză aprofundată":"In-depth analysis","Ajustări regulate":"Regular adjustments","Analiză video":"Video analysis","Obiective săptămânale":"Weekly goals","Suport prioritar":"Priority support","Premium":"Premium","1.000":"1,000","Tot ce include Transform":"Everything in Transform","Contact prioritar":"Priority contact","Analiză tehnică aprofundată":"In-depth technique analysis","Monitorizare atentă":"Close monitoring","Ajustări rapide când sunt justificate":"Fast adjustments when justified","Reevaluări periodice":"Periodic reassessments","Transform 3 luni":"Transform 3 months","2.000":"2,000","LEI / 3 LUNI":"€ / 3 MONTHS","Experiență Transform":"Transform experience","Planificare pe termen mai lung":"Longer-term planning","Monitorizare pe 3 luni":"3-month monitoring","Ajustări pe parcurs":"Adjustments along the way","Economisești 400 lei":"Save 400 lei","Cel mai bun preț":"Best value","Transformarea ta începe acum":"Your transformation starts now","REZULTATELE":"RESULTS","VORBESC.":"SPEAK.","Vrei să vezi":"Want to see","rezultate reale, rezumate și îndrumări":"real results, summaries and guidance","care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.":"that can help you? Follow me on TikTok for daily content, transformations, workouts and practical tips.","URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8":"FOLLOW ME ON TIKTOK → @vio.bulz8","VREI SĂ":"DO YOU WANT TO","AFLI MAI MULTE?":"LEARN MORE?","Pentru rezultate, îndrumare și informații despre coaching, mă poți contacta direct. Îți răspund și te ajut să alegi cea mai potrivită variantă pentru obiectivul tău.":"For results, guidance and information about coaching, you can contact me directly. I will answer and help you choose the option that best fits your goal.","Îndrumare și informații despre antrenament":"Training guidance and information","Discuții despre nutriție și progres":"Nutrition and progress discussions","Informații despre coaching online și fizic":"Online and in-person coaching information","Răspunsuri direct de la Vio Bulz":"Answers directly from Vio Bulz","CONTACT →":"CONTACT →","REZULTATE REALE":"REAL RESULTS","Transformări autentice și progres.":"Authentic transformations and progress.","ÎNDRUMARE CORECTĂ":"PROPER GUIDANCE","Informații clare și aplicate.":"Clear, practical information.","OBIECTIVE ATINSE":"GOALS ACHIEVED","Cu plan, disciplină și consecvență.":"With planning, discipline and consistency.","VIO BULZ":"VIO BULZ","— COACHING & ÎNDRUMARE":"— COACHING & GUIDANCE","Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.":"Want to see more results, transformations and practical tips? Follow me on TikTok or contact me directly.","FAQ":"FAQ","Întrebări":"Frequently","frecvente":"Asked Questions","Pot face coaching dacă sunt începător?":"Can I do coaching if I am a beginner?","Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.":"Yes. The plan is built around your starting level and your goal.","Pot face coaching online?":"Can I do online coaching?","Da. Coaching-ul este disponibil atât online, cât și fizic.":"Yes. Coaching is available both online and in person.","Trebuie să țin o dietă strictă?":"Do I need to follow a strict diet?","Strategia alimentară este adaptată obiectivului și stilului tău de viață.":"The nutrition strategy is adapted to your goal and lifestyle.","Cât durează până văd rezultate?":"How long until I see results?","Depinde de punctul de plecare, obiectiv și consecvență. Nu există o durată universală.":"It depends on your starting point, goal and consistency. There is no universal timeline.","Cum încep?":"How do I start?","Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.":"You complete the assessment, we discuss your goal and choose the right coaching option together.","EȘTI PREGĂTIT":"ARE YOU READY","SĂ ÎNCEPI?":"TO START?","Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.":"You do not need to be in shape already. You just need to be ready to start.","GHIDUL COMPLET DE FITNESS & COACHING":"THE COMPLETE FITNESS & COACHING GUIDE","GHIDUL COMPLET DE":"THE COMPLETE","FITNESS & COACHING":"FITNESS & COACHING","Antrenament • Nutriție • Anatomie • Coaching":"Training • Nutrition • Anatomy • Coaching","Un ghid practic pentru cei care vor să-și construiască un corp puternic, sănătos și echilibrat, cu informații clare și aplicabile despre antrenament, nutriție, anatomie și coaching.":"A practical guide for anyone who wants to build a strong, healthy and balanced body, with clear and applicable information about training, nutrition, anatomy and coaching.","55 LEI":"€55","CUMPĂRĂ GHIDUL":"BUY THE GUIDE","VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT":"VIO BULZ COACHING • ONLINE • IN-PERSON • PERSONALIZED","Membru acreditat FRCF — Federația Română de Culturism și Fitness":"FRCF accredited member — Romanian Bodybuilding and Fitness Federation","TikTok:":"TikTok:","VIO BULZ COACHING - PACHETE":"VIO BULZ COACHING - PACKAGES","VEZI PACHETELE DE COACHING":"VIEW COACHING PACKAGES"}};
+  const originalNodes = [];
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
     acceptNode(node){
       if(!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
-      if(node.parentElement && (
-        node.parentElement.closest("#lang-switcher") ||
-        ["SCRIPT","STYLE"].includes(node.parentElement.tagName)
-      )) return NodeFilter.FILTER_REJECT;
+      const p=node.parentElement;
+      if(p && (p.closest('#lang-switcher') || p.tagName==='SCRIPT' || p.tagName==='STYLE')) return NodeFilter.FILTER_REJECT;
       return NodeFilter.FILTER_ACCEPT;
     }
   });
+  let n;
+  while(n=walker.nextNode()) originalNodes.push([n,n.nodeValue]);
 
-  let node;
-  while(node = walker.nextNode()){
-    original.set(node, node.nodeValue);
-  }
-
-  function translatedText(raw, lang){
-    const trimmed = raw.trim();
-    if(lang === "ro") return raw;
-    const dict = translations[lang] || {};
-    if(!dict[trimmed]) return raw;
-    const leading = raw.match(/^\s*/)?.[0] || "";
-    const trailing = raw.match(/\s*$/)?.[0] || "";
-    return leading + dict[trimmed] + trailing;
-  }
-
-  const basePrices = {
-    ro: {"500":"500 LEI","800":"800 LEI","1.000":"1.000 LEI","2.000":"2.000 LEI","55":"55 LEI"},
-    es: {"500":"100 €","800":"160 €","1.000":"200 €","2.000":"400 €","55":"11 €"},
-    en: {"500":"€100","800":"€160","1.000":"€200","2.000":"€400","55":"€11"}
+  const metaOriginal = document.querySelector('meta[name="description"]')?.content || '';
+  const titles = {
+    ro:'Vio Bulz Coaching',
+    es:'Vio Bulz Coaching — coaching personalizado online y presencial',
+    en:'Vio Bulz Coaching — personalized online and in-person coaching'
+  };
+  const descriptions = {
+    ro:'Vio Bulz Coaching — coaching personalizat online și fizic. Construiește-ți corpul. Construiește-ți disciplina.',
+    es:'Vio Bulz Coaching — coaching personalizado online y presencial. Construye tu cuerpo. Construye tu disciplina.',
+    en:'Vio Bulz Coaching — personalized online and in-person coaching. Build your body. Build your discipline.'
   };
 
-  function translate(lang){
-    if(!["ro","es","en"].includes(lang)) lang="ro";
-
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll("#lang-switcher button").forEach(btn=>{
-      btn.classList.toggle("active", btn.dataset.lang === lang);
-    });
-
-    original.forEach((raw,node)=>{
-      if(document.contains(node)){
-        node.nodeValue = translatedText(raw,lang);
-      }
-    });
-
-    // Prices are displayed in the selected language/currency.
-    document.querySelectorAll(".price").forEach(p=>{
-      const small = p.querySelector("small");
-      if(!small) return;
-
-      const originalText = p.dataset.originalPrice || p.textContent;
-      p.dataset.originalPrice = originalText;
-
-      const m = originalText.match(/1\.000|2\.000|800|500/);
-      if(!m) return;
-
-      const key = m[0];
-      const value = basePrices[lang][key] || basePrices.ro[key];
-      const numberPart = value.replace(/\s*(LEI|€)/g,"").trim();
-
-      // Remove only direct text nodes before <small>.
-      [...p.childNodes].forEach(n=>{
-        if(n.nodeType === Node.TEXT_NODE) n.remove();
-      });
-
-      p.insertBefore(document.createTextNode(
-        lang === "en" ? "€" + numberPart : numberPart + (lang === "es" ? " €" : " LEI")
-      ), small);
-
-      if(lang === "ro"){
-        small.textContent = key === "2.000" ? "/ 3 LUNI" : "/ LUNĂ";
-      } else if(lang === "es"){
-        small.textContent = key === "2.000" ? "/ 3 MESES" : "/ MES";
-      } else {
-        small.textContent = key === "2.000" ? "/ 3 MONTHS" : "/ MONTH";
-      }
-    });
-
-    // Pass the selected language to the application/contact pages.
-    document.querySelectorAll('a[href*="Vio_Bulz_Coaching_Aplicatie.html"], a[href*="Vio_Bulz_Contact.html"]').forEach(a=>{
-      const base = a.href.split("?")[0];
-      a.href = base + "?lang=" + lang;
-    });
-
-    localStorage.setItem("vb_lang",lang);
+  function textFor(raw,lang){
+    if(lang==='ro') return raw;
+    const t=raw.trim();
+    const dict=translations[lang]||{};
+    if(!(t in dict)) return raw;
+    const lead=(raw.match(/^\s*/) || [''])[0];
+    const trail=(raw.match(/\s*$/) || [''])[0];
+    return lead + dict[t] + trail;
   }
 
-  document.querySelectorAll("#lang-switcher button").forEach(btn=>{
-    btn.addEventListener("click",function(e){
-      e.preventDefault();
-      e.stopPropagation();
-      translate(this.dataset.lang);
+  function setPrices(lang){
+    const priceMap={
+      ro:{'500':['500','LEI / LUNĂ'],'800':['800','LEI / LUNĂ'],'1.000':['1.000','LEI / LUNĂ'],'2.000':['2.000','LEI / 3 LUNI']},
+      es:{'500':['100','€ / MES'],'800':['160','€ / MES'],'1.000':['200','€ / MES'],'2.000':['400','€ / 3 MESES']},
+      en:{'500':['€100','/ MONTH'],'800':['€160','/ MONTH'],'1.000':['€200','/ MONTH'],'2.000':['€400','/ 3 MONTHS']}
+    };
+    document.querySelectorAll('.price').forEach(p=>{
+      if(!p.dataset.vbPriceKey){
+        const txt=p.textContent||'';
+        const m=txt.match(/1\.000|2\.000|800|500/);
+        if(m) p.dataset.vbPriceKey=m[0];
+      }
+      const key=p.dataset.vbPriceKey;
+      if(!key || !priceMap[lang]?.[key]) return;
+      const small=p.querySelector('small');
+      if(!small) return;
+      p.childNodes.forEach(node=>{ if(node.nodeType===Node.TEXT_NODE) node.remove(); });
+      p.insertBefore(document.createTextNode(priceMap[lang][key][0]+' '),small);
+      small.textContent=priceMap[lang][key][1];
     });
-  });
+  }
 
-  translate(localStorage.getItem("vb_lang") || "ro");
+  function translate(lang){
+    if(!['ro','es','en'].includes(lang)) lang='ro';
+    document.documentElement.lang=lang;
+    document.title=titles[lang];
+    const md=document.querySelector('meta[name="description"]'); if(md) md.content=descriptions[lang];
+    document.querySelectorAll('#lang-switcher button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+    originalNodes.forEach(([node,raw])=>{ if(document.contains(node)) node.nodeValue=textFor(raw,lang); });
+    setPrices(lang);
+    document.querySelectorAll('a[href*="Vio_Bulz_Coaching_Aplicatie.html"],a[href*="Vio_Bulz_Contact.html"]').forEach(a=>{
+      const base=a.href.split('?')[0]; a.href=base+'?lang='+lang;
+    });
+    localStorage.setItem('vb_lang',lang);
+  }
+
+  document.querySelectorAll('#lang-switcher button').forEach(btn=>btn.addEventListener('click',function(e){
+    e.preventDefault(); e.stopPropagation(); translate(this.dataset.lang);
+  }));
+  translate(localStorage.getItem('vb_lang') || 'ro');
 })();
-</script>
-
-</body>
+</script></body>
 </html>
