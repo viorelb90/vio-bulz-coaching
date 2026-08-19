@@ -149,6 +149,56 @@ button:hover {
 .back:hover {
   color: #fff;
 }
+
+/* LANGUAGE BUTTONS - TOP RIGHT */
+#lang-switcher {
+  position: fixed !important;
+  top: 18px !important;
+  right: 18px !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#lang-switcher button {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 52px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #333 !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+}
+
+#lang-switcher button:hover,
+#lang-switcher button.active {
+  background: #ff3b19 !important;
+  border-color: #ff3b19 !important;
+}
+
+@media (max-width: 600px) {
+  #lang-switcher {
+    top: 12px !important;
+    right: 12px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -156,85 +206,152 @@ button:hover {
 
 <main class="wrap">
 
-<div class="logo">
-  VIO <span>BULZ</span> COACHING
-</div>
+  <div class="lang-switcher" id="lang-switcher">
+    <button type="button" data-lang="ro">RO</button>
+    <button type="button" data-lang="es">ES</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
 
-<h1>
-  CONTACTEAZĂ-<span>MĂ</span>
-</h1>
+  <div class="logo">VIO <span>BULZ</span> COACHING</div>
 
-<p class="subtitle">
-  Ai o întrebare, vrei mai multe informații despre coaching
-  sau vrei să discutăm despre obiectivul tău?
-  Alege varianta prin care îți este cel mai ușor să mă contactezi.
-</p>
+  <h1 id="page-title">CONTACTEAZĂ-<span>MĂ</span></h1>
 
-<a class="contact"
-   href="https://wa.me/40733202538"
-   target="_blank"
-   rel="noopener">
-  <span class="icon">💬</span>
-  <span class="label">WHATSAPP</span>
-  <span class="value">Scrie-mi direct pe WhatsApp</span>
-</a>
+  <p class="subtitle" id="subtitle">
+    Ai o întrebare, vrei mai multe informații despre coaching sau vrei să discutăm despre obiectivul tău?
+    Alege varianta prin care îți este cel mai ușor să mă contactezi.
+  </p>
 
-<form action="https://formsubmit.co/viorelbulz90@gmail.com" method="POST">
+  <a class="contact" href="https://wa.me/40733202538" target="_blank" rel="noopener">
+    <span class="icon">💬</span>
+    <span class="label">WHATSAPP</span>
+    <span class="value" id="whatsapp-value">Scrie-mi direct pe WhatsApp</span>
+  </a>
 
-  <h2>📧 TRIMITE-MI UN EMAIL</h2>
+  <form id="contact-form" action="https://formsubmit.co/viorelbulz90@gmail.com" method="POST">
+    <h2 id="email-title">📧 TRIMITE-MI UN EMAIL</h2>
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Numele tău"
-    required
-  >
+    <input type="text" id="name" name="name" placeholder="Numele tău" required>
+    <input type="email" id="email" name="email" placeholder="Adresa ta de email" required>
+    <textarea id="message" name="message" placeholder="Scrie mesajul tău..." required></textarea>
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Adresa ta de email"
-    required
-  >
+    <input type="hidden" id="subject" name="_subject" value="Mesaj nou – Vio Bulz Coaching">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" id="next" name="_next" value="">
 
-  <textarea
-    name="message"
-    placeholder="Scrie mesajul tău..."
-    required
-  ></textarea>
+    <button type="submit" id="submit-button">TRIMITE MESAJUL →</button>
+  </form>
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="Mesaj nou – Vio Bulz Coaching"
-  >
+  <a class="contact" href="https://www.tiktok.com/@vio.bulz8" target="_blank" rel="noopener">
+    <span class="icon">♪</span>
+    <span class="label">TIKTOK</span>
+    <span class="value" id="tiktok-value">@vio.bulz8 — urmărește-mă pentru conținut și sfaturi</span>
+  </a>
 
-  <input
-    type="hidden"
-    name="_template"
-    value="table"
-  >
-
-  <button type="submit">
-    TRIMITE MESAJUL →
-  </button>
-
-</form>
-
-<a class="contact"
-   href="https://www.tiktok.com/@vio.bulz8"
-   target="_blank"
-   rel="noopener">
-  <span class="icon">♪</span>
-  <span class="label">TIKTOK</span>
-  <span class="value">@vio.bulz8 — urmărește-mă pentru conținut și sfaturi</span>
-</a>
-
-<a class="back" href="index.html">
-  ← Înapoi pe site
-</a>
+  <a class="back" id="back-link" href="index.html">← Înapoi pe site</a>
 
 </main>
+
+<script>
+(function () {
+  const translations = {
+    ro: {
+      title: "Contactează-mă – Vio Bulz Coaching",
+      pageTitle: "CONTACTEAZĂ-<span>MĂ</span>",
+      subtitle: "Ai o întrebare, vrei mai multe informații despre coaching sau vrei să discutăm despre obiectivul tău? Alege varianta prin care îți este cel mai ușor să mă contactezi.",
+      whatsapp: "Scrie-mi direct pe WhatsApp",
+      emailTitle: "📧 TRIMITE-MI UN EMAIL",
+      name: "Numele tău",
+      email: "Adresa ta de email",
+      message: "Scrie mesajul tău...",
+      subject: "Mesaj nou – Vio Bulz Coaching",
+      submit: "TRIMITE MESAJUL →",
+      tiktok: "@vio.bulz8 — urmărește-mă pentru conținut și sfaturi",
+      back: "← Înapoi pe site"
+    },
+    es: {
+      title: "Contáctame – Vio Bulz Coaching",
+      pageTitle: "CONTÁCT<span>AME</span>",
+      subtitle: "¿Tienes alguna pregunta, quieres más información sobre el coaching o quieres hablar sobre tu objetivo? Elige la opción que te resulte más fácil para contactarme.",
+      whatsapp: "Escríbeme directamente por WhatsApp",
+      emailTitle: "📧 ENVÍAME UN EMAIL",
+      name: "Tu nombre",
+      email: "Tu dirección de email",
+      message: "Escribe tu mensaje...",
+      subject: "Nuevo mensaje – Vio Bulz Coaching",
+      submit: "ENVIAR MENSAJE →",
+      tiktok: "@vio.bulz8 — sígueme para contenido y consejos",
+      back: "← Volver al sitio"
+    },
+    en: {
+      title: "Contact Me – Vio Bulz Coaching",
+      pageTitle: "CONTACT <span>ME</span>",
+      subtitle: "Do you have a question, want more information about coaching, or want to talk about your goal? Choose the option that is easiest for you to contact me.",
+      whatsapp: "Message me directly on WhatsApp",
+      emailTitle: "📧 SEND ME AN EMAIL",
+      name: "Your name",
+      email: "Your email address",
+      message: "Write your message...",
+      subject: "New message – Vio Bulz Coaching",
+      submit: "SEND MESSAGE →",
+      tiktok: "@vio.bulz8 — follow me for content and tips",
+      back: "← Back to site"
+    }
+  };
+
+  function getLanguage() {
+    const urlLang = new URLSearchParams(window.location.search).get("lang");
+    if (["ro", "es", "en"].includes(urlLang)) return urlLang;
+
+    const saved = localStorage.getItem("vb_lang");
+    if (["ro", "es", "en"].includes(saved)) return saved;
+
+    return "ro";
+  }
+
+  function applyLanguage(lang) {
+    const t = translations[lang] || translations.ro;
+
+    document.documentElement.lang = lang;
+    document.title = t.title;
+
+    document.getElementById("page-title").innerHTML = t.pageTitle;
+    document.getElementById("subtitle").textContent = t.subtitle;
+    document.getElementById("whatsapp-value").textContent = t.whatsapp;
+    document.getElementById("email-title").textContent = t.emailTitle;
+    document.getElementById("name").placeholder = t.name;
+    document.getElementById("email").placeholder = t.email;
+    document.getElementById("message").placeholder = t.message;
+    document.getElementById("subject").value = t.subject;
+    document.getElementById("submit-button").textContent = t.submit;
+    document.getElementById("tiktok-value").textContent = t.tiktok;
+    document.getElementById("back-link").textContent = t.back;
+    document.getElementById("back-link").href = "index.html?lang=" + lang;
+
+    document.getElementById("next").value =
+      new URL("Vio_Bulz_Multumesc.html?lang=" + lang, window.location.href).href;
+
+    document.querySelectorAll("#lang-switcher button").forEach(function (button) {
+      button.classList.toggle("active", button.dataset.lang === lang);
+    });
+
+    localStorage.setItem("vb_lang", lang);
+
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", newUrl.href);
+  }
+
+  document.querySelectorAll("#lang-switcher button").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      applyLanguage(button.dataset.lang);
+    });
+  });
+
+  applyLanguage(getLanguage());
+})();
+</script>
 
 </body>
 </html>
