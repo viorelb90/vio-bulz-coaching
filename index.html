@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Vio Bulz Coaching</title>
-<meta name="description" content="Vio Bulz Coaching — coaching personalizat online și fizic. Construiește-ți corpul. Construiește-ți disciplina.">
+<meta content="Vio Bulz Coaching — coaching personalizat online și fizic. Construiește-ți corpul. Construiește-ți disciplina." name="description"/>
 <style>
 :root{
   --bg:#070707;
@@ -15,12 +15,14 @@
   --red:#e31319;
   --line:#292929;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--bg);color:var(--text);
   font-family:Arial,Helvetica,sans-serif;line-height:1.65;
 }
+
 a{text-decoration:none;color:inherit}
 .container{width:min(1080px,92%);margin:auto}
 .hero{
@@ -30,6 +32,7 @@ a{text-decoration:none;color:inherit}
     radial-gradient(circle at 50% 10%,rgba(227,19,25,.12),transparent 34%),
     linear-gradient(180deg,#050505 0%,#090909 100%);
 }
+
 .hero-inner{text-align:center;padding:90px 0}
 .kicker{color:var(--red);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.85rem}
 h1{font-size:clamp(3rem,8vw,6.8rem);line-height:.9;margin:18px 0 10px;letter-spacing:-4px}
@@ -41,12 +44,14 @@ h1 span{color:var(--red)}
  color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.7px;
  border-radius:4px;box-shadow:0 8px 28px rgba(227,19,25,.18);
 }
+
 .btn.alt{background:transparent;border:1px solid var(--red)}
 section{padding:85px 0;border-bottom:1px solid var(--line)}
 .section-title{
  font-size:clamp(2rem,5vw,3.6rem);line-height:1;margin:0 0 14px;
  text-transform:uppercase;letter-spacing:-1.5px;
 }
+
 .section-title span{color:var(--red)}
 .lead{color:#ddd;font-size:1.15rem;max-width:850px}
 .story{max-width:900px;margin:auto}
@@ -56,18 +61,22 @@ section{padding:85px 0;border-bottom:1px solid var(--line)}
  background:linear-gradient(90deg,rgba(227,19,25,.10),transparent);
  font-size:1.35rem;font-weight:800;
 }
+
 .story .quote{
  font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:900;
  line-height:1.15;text-align:center;margin:45px auto;max-width:800px;
 }
+
 .story .quote span{color:var(--red)}
 .process{
  display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:35px
 }
+
 .step{
  background:var(--panel);border:1px solid var(--line);padding:22px 12px;text-align:center;
  min-height:150px;
 }
+
 .step b{display:block;color:var(--red);font-size:1.7rem;margin-bottom:8px}
 .step span{font-weight:700;text-transform:uppercase;font-size:.82rem}
 .gymbro{
@@ -75,6 +84,7 @@ section{padding:85px 0;border-bottom:1px solid var(--line)}
  radial-gradient(circle at 90% 50%,rgba(227,19,25,.14),transparent 35%),var(--panel);
  display:flex;align-items:center;justify-content:space-between;gap:30px;
 }
+
 .gymbro h3{font-size:clamp(1.8rem,4vw,3rem);margin:0}
 .gymbro strong{color:var(--red)}
 .packages{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}
@@ -82,6 +92,7 @@ section{padding:85px 0;border-bottom:1px solid var(--line)}
  background:var(--panel);border:1px solid var(--line);padding:28px 22px;
  border-radius:6px;display:flex;flex-direction:column;
 }
+
 .card.featured{border-color:var(--red);box-shadow:0 0 35px rgba(227,19,25,.08)}
 .card h3{font-size:1.35rem;margin:0 0 8px;text-transform:uppercase}
 .price{font-size:1.9rem;font-weight:900;color:var(--red)}
@@ -92,10 +103,12 @@ section{padding:85px 0;border-bottom:1px solid var(--line)}
  background:var(--panel);border:1px solid var(--line);padding:35px;
  display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center;
 }
+
 .before-after{
  min-height:260px;border:1px dashed #555;display:flex;align-items:center;justify-content:center;
  text-align:center;color:#aaa;padding:25px;
 }
+
 .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
 .testimonial{background:var(--panel);border:1px solid var(--line);padding:22px}
 .faq{max-width:850px;margin:auto}
@@ -106,12 +119,14 @@ details p{color:#bbb}
  radial-gradient(circle at 50% 0,rgba(227,19,25,.16),transparent 45%),#080808}
 .cta h2{font-size:clamp(2.5rem,7vw,5rem);line-height:.95;margin:0}
 footer{padding:35px 0;text-align:center;color:#777;font-size:.85rem}
+
 @media(max-width:850px){
  .process{grid-template-columns:repeat(3,1fr)}
  .packages{grid-template-columns:repeat(2,1fr)}
  .results{grid-template-columns:1fr}
  .gymbro{display:block}
 }
+
 @media(max-width:560px){
  section{padding:58px 0}
  .hero-inner{padding:70px 0}
@@ -122,131 +137,182 @@ footer{padding:35px 0;text-align:center;color:#777;font-size:.85rem}
  .story p{font-size:1rem}
 }
 </style>
-</head>
-<body>
+
+<style>
+#lang-switcher{
+  position:fixed;top:16px;right:16px;z-index:9999;
+  display:flex;gap:6px;background:#111;border:1px solid #333;
+  padding:6px;border-radius:8px;box-shadow:0 8px 25px rgba(0,0,0,.35)
+}
+
+#lang-switcher button{
+  border:1px solid #444;background:#181818;color:#fff;padding:7px 9px;
+  border-radius:5px;font-weight:800;cursor:pointer
+}
+
+#lang-switcher button.active{background:#e31319;border-color:#e31319}
+</style></head>
+
+<body><div id="lang-switcher"><button data-lang="ro" type="button">RO</button><button data-lang="es" type="button">ES</button><button data-lang="en" type="button">EN</button></div>
 
 <header class="hero">
- <div class="container hero-inner">
-  <div class="kicker">Vio Bulz Coaching</div>
-  <h1>CONSTRUIEȘTE-ȚI<br><span>CORPUL.</span></h1>
-  <h2>Construiește-ți disciplina.</h2>
-  <p>Coaching personalizat <strong>ONLINE & FIZIC</strong>, construit în jurul obiectivului, stilului tău de viață și progresului tău.</p>
-  <a class="btn" href="Vio_Bulz_Coaching_Aplicatie.html">Vreau să încep</a>
- </div>
+<div class="container hero-inner">
+<div class="kicker">Vio Bulz Coaching</div>
+<h1>CONSTRUIEȘTE-ȚI<br/><span>CORPUL.</span></h1>
+<h2>Construiește-ți disciplina.</h2>
+<p>Coaching personalizat <strong>ONLINE &amp; FIZIC</strong>, construit în jurul obiectivului, stilului tău de viață și progresului tău.</p>
+<a class="btn" href="Vio_Bulz_Coaching_Aplicatie.html">Vreau să încep</a>
+</div>
 </header>
 
 <section id="despre">
- <div class="container story">
-  <div class="kicker">Despre mine</div>
-  <div style="margin:18px 0 26px;padding:14px 18px;border-left:3px solid var(--red);background:#111;color:#ddd;">
-   <strong style="color:#fff;">Membru acreditat FRCF</strong> — Federația Română de Culturism și Fitness
-  </div>
-  <h2 class="section-title">Am învățat să merg din nou.<br><span>Acum îi ajut și pe alții să meargă înainte.</span></h2>
+<div class="container story">
+<div class="kicker">Despre mine</div>
+<div style="margin:18px 0 26px;padding:14px 18px;border-left:3px solid var(--red);background:#111;color:#ddd;">
+<strong style="color:#fff;">Membru acreditat FRCF</strong> — Federația Română de Culturism și Fitness
+</div>
 
-  <p>În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.</p>
-  <p>După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la <strong>65 kg</strong> și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.</p>
+<h2 class="section-title">Am învățat să merg din nou.<br/><span>Acum îi ajut și pe alții să meargă înainte.</span></h2>
 
-  <p>Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.</p>
+<p>În 2019 am ajuns într-unul dintre cele mai grele momente din viața mea.</p>
+<p>După o perioadă lungă și foarte dificilă, marcată de depresie și de consum excesiv de alcool timp de aproximativ doi ani, sănătatea mea s-a prăbușit. Am ajuns la <strong>65 kg</strong> și am fost internat la Spitalul Județean din Timișoara, la etajul 9, cu o formă severă de neuropatie care afecta nervii periferici.</p>
+<p>Durerile erau insuportabile. Le simțeam în picioare, de la vârful degetelor până spre șolduri. Nu puteam să mănânc. Nu puteam să dorm. Abia îmi puteam controla picioarele.</p>
+<p>Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.</p>
 
-  <p>Cu un an înainte ajunsesem chiar să mă deplasez în scaun cu rotile.</p>
+<div class="impact">Au fost zile și nopți pe care nu le voi uita niciodată.</div>
 
-  <div class="impact">Au fost zile și nopți pe care nu le voi uita niciodată.</div>
+<p>Urletele mele de durere se auzeau pe tot palierul de la etajul 9, unde erau zeci de camere. Durerea devenise atât de puternică încât, uneori, singurul lucru pe care îl mai puteam face era să strig.</p>
+<p>Asistentele veneau la mine și îmi administrau tratamentul pentru a mă seda, astfel încât să pot adormi câteva ore și, pentru puțin timp, să uit de durere.</p>
+<p>Apoi mă trezeam și totul începea din nou.</p>
 
-  <p>Urletele mele de durere se auzeau pe tot palierul de la etajul 9, unde erau zeci de camere. Durerea devenise atât de puternică încât, uneori, singurul lucru pe care îl mai puteam face era să strig.</p>
+<div class="impact">Durerea. Frica. Neputința.</div>
 
-  <p>Asistentele veneau la mine și îmi administrau tratamentul pentru a mă seda, astfel încât să pot adormi câteva ore și, pentru puțin timp, să uit de durere.</p>
+<p>Și totuși, undeva în mijlocul acelei suferințe, am început să-mi construiesc cea mai puternică ambiție pe care am avut-o vreodată.</p>
 
-  <p>Apoi mă trezeam și totul începea din nou.</p>
+<div class="quote">„Dacă ies de aici, <span>mă voi ridica.</span> Îmi voi reconstrui corpul, îmi voi reconstrui mintea și mă voi întoarce pe culmile sportului.”</div>
 
-  <div class="impact">Durerea. Frica. Neputința.</div>
+<p>Nu știam cât va dura. Nu știam dacă voi reuși. Știam doar că nu voiam ca povestea mea să se termine într-un pat de spital.</p>
+<p>După aproape trei săptămâni de spitalizare și după o perioadă extrem de grea de tratament și recuperare, am ieșit din spital cu șanse minime și am început să reconstruiesc totul de la zero.</p>
 
-  <p>Și totuși, undeva în mijlocul acelei suferințe, am început să-mi construiesc cea mai puternică ambiție pe care am avut-o vreodată.</p>
-
-  <div class="quote">„Dacă ies de aici, <span>mă voi ridica.</span> Îmi voi reconstrui corpul, îmi voi reconstrui mintea și mă voi întoarce pe culmile sportului.”</div>
-
-  <p>Nu știam cât va dura. Nu știam dacă voi reuși. Știam doar că nu voiam ca povestea mea să se termine într-un pat de spital.</p>
-
-  <p>După aproape trei săptămâni de spitalizare și după o perioadă extrem de grea de tratament și recuperare, am ieșit din spital cu șanse minime și am început să reconstruiesc totul de la zero.</p>
 
   <h3 class="section-title" style="margin-top:55px">Am învățat să <span>merg din nou.</span></h3>
   <p>Primii pași. Apoi mersul. Apoi bicicleta. Apoi exerciții ușoare. Apoi aparatele.</p>
-  <p><strong>Pas cu pas. Zi după zi.</strong></p>
-  <p>A fost un drum lung, cu durere, frică, frustrare și momente în care ar fi fost mult mai ușor să renunț.</p>
-  <p>Dar nu am renunțat.</p>
-  <p>M-am rugat. M-am forțat. Am continuat.</p>
-  <p>Am început să-mi recapăt controlul asupra picioarelor, să-mi reconstruiesc forța și să-mi recâștig încrederea în propriul corp.</p>
-  <p>Mi-am antrenat corpul, dar înainte de toate mi-am antrenat <strong>mintea să creadă că pot.</strong></p>
-  <p>Ceea ce părea imposibil a început, încetul cu încetul, să devină realitate.</p>
-  <p>Astăzi sunt sănătos, puternic și mă antrenez la un nivel la care, în acea perioadă, nici măcar nu îndrăzneam să visez.</p>
-  <p>Medicii care m-au urmărit au fost surprinși de evoluția mea, iar recuperarea mea a fost considerată deosebită.</p>
+<p><strong>Pas cu pas. Zi după zi.</strong></p>
+<p>A fost un drum lung, cu durere, frică, frustrare și momente în care ar fi fost mult mai ușor să renunț.</p>
+<p>Dar nu am renunțat.</p>
+<p>M-am rugat. M-am forțat. Am continuat.</p>
+<p>Am început să-mi recapăt controlul asupra picioarelor, să-mi reconstruiesc forța și să-mi recâștig încrederea în propriul corp.</p>
+<p>Mi-am antrenat corpul, dar înainte de toate mi-am antrenat <strong>mintea să creadă că pot.</strong></p>
+<p>Ceea ce părea imposibil a început, încetul cu încetul, să devină realitate.</p>
+<p>Astăzi sunt sănătos, puternic și mă antrenez la un nivel la care, în acea perioadă, nici măcar nu îndrăzneam să visez.</p>
+<p>Medicii care m-au urmărit au fost surprinși de evoluția mea, iar recuperarea mea a fost considerată deosebită.</p>
 
-  <div class="impact">Am fost la pământ. Am învățat să mă ridic. Acum vreau să-i ajut și pe alții să facă același lucru.</div>
- </div>
-  <div style="text-align:center;margin-top:30px;">
-  <p><strong>Urmărește-mă pe TikTok</strong></p>
-  <a href="https://www.tiktok.com/@vio.bulz8" target="_blank" class="btn">@vio.bulz8</a>
+<div class="impact">Am fost la pământ. Am învățat să mă ridic. Acum vreau să-i ajut și pe alții să facă același lucru.</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+<p><strong>Urmărește-mă pe TikTok</strong></p>
+<a class="btn" href="https://www.tiktok.com/@vio.bulz8" target="_blank">@vio.bulz8</a>
 </div>
 </section>
 
 <section>
- <div class="container">
-  <div class="kicker">Metoda</div>
-  <h2 class="section-title">Ce este Vio Bulz <span>Coaching?</span></h2>
-  <p class="lead">Nu este un program generic trimis pe WhatsApp. Este un proces de coaching personalizat în care analizăm punctul de plecare, stabilim obiectivul, construim antrenamentul și strategia alimentară, urmărim progresul și ajustăm planul pe parcurs.</p>
-  <div class="process">
-   <div class="step"><b>01</b><span>Evaluare</span></div>
-   <div class="step"><b>02</b><span>Plan</span></div>
-   <div class="step"><b>03</b><span>Execuție</span></div>
-   <div class="step"><b>04</b><span>Check-in</span></div>
-   <div class="step"><b>05</b><span>Ajustare</span></div>
-   <div class="step"><b>06</b><span>Progres</span></div>
-  </div>
- </div>
+<div class="container">
+<div class="kicker">Metoda</div>
+<h2 class="section-title">Ce este Vio Bulz <span>Coaching?</span></h2>
+<p class="lead">Nu este un program generic trimis pe WhatsApp. Este un proces de coaching personalizat în care analizăm punctul de plecare, stabilim obiectivul, construim antrenamentul și strategia alimentară, urmărim progresul și ajustăm planul pe parcurs.</p>
+
+<div class="process">
+<div class="step"><b>01</b><span>Evaluare</span></div>
+<div class="step"><b>02</b><span>Plan</span></div>
+<div class="step"><b>03</b><span>Execuție</span></div>
+<div class="step"><b>04</b><span>Check-in</span></div>
+<div class="step"><b>05</b><span>Ajustare</span></div>
+<div class="step"><b>06</b><span>Progres</span></div>
+</div>
+</div>
 </section>
 
 <section>
- <div class="container">
-  <div class="gymbro">
-   <div>
-    <div class="kicker">Ofertă pentru clienți noi</div>
-    <h3>GYM BRO <strong>WEEK</strong></h3>
-    <p><strong>4 ANTRENAMENTE GRATUITE</strong><br>Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.</p>
-   </div>
-   <a class="btn" href="Vio_Bulz_Coaching_Aplicatie.html">Vreau Gym Bro Week</a>
-  </div>
- </div>
+<div class="container">
+<div class="gymbro">
+<div>
+<div class="kicker">Ofertă pentru clienți noi</div>
+<h3>GYM BRO <strong>WEEK</strong></h3>
+<p><strong>4 ANTRENAMENTE GRATUITE</strong><br/>Vino să mă cunoști, să ne antrenăm cot la cot și să vezi dacă stilul meu de coaching este potrivit pentru tine.</p>
+</div>
+
+<a class="btn" href="Vio_Bulz_Coaching_Aplicatie.html">Vreau Gym Bro Week</a>
+</div>
+</div>
 </section>
 
 <section id="pachete">
- <div class="container">
-  <div class="kicker">Coaching</div>
-  <h2 class="section-title">Alege pachetul <span>potrivit pentru tine</span></h2>
-  <p class="lead">Toate pachetele sunt disponibile pentru coaching <strong>ONLINE & FIZIC</strong>.</p>
-  <div class="packages">
-   <div class="card">
-    <h3>Basic</h3><div class="price">500 <small>LEI / LUNĂ</small></div>
-    <ul><li>Evaluare inițială</li><li>Program personalizat</li><li>Strategie alimentară</li><li>Check-in săptămânal</li><li>Suport prin mesaje</li></ul>
-    <a class="btn alt" href="https://payhip.com/b/vrbl2">Alege pachet</a>
-   </div>
-   <div class="card featured">
-    <h3>Transform ⭐</h3><div class="price">800 <small>LEI / LUNĂ</small></div>
-    <ul><li>Tot ce include Basic</li><li>Analiză aprofundată</li><li>Ajustări regulate</li><li>Analiză video</li><li>Obiective săptămânale</li><li>Suport prioritar</li></ul>
-    <a class="btn" href="https://payhip.com/b/BQTrq">Alege pachet</a>
-   </div>
-   <div class="card">
-    <h3>Premium</h3><div class="price">1.000 <small>LEI / LUNĂ</small></div>
-    <ul><li>Tot ce include Transform</li><li>Contact prioritar</li><li>Analiză tehnică aprofundată</li><li>Monitorizare atentă</li><li>Ajustări rapide când sunt justificate</li><li>Reevaluări periodice</li></ul>
-    <a class="btn alt" href="https://payhip.com/b/7w2Ca">Alege pachet</a>
-   </div>
-   <div class="card featured">
-    <h3>Transform 3 luni</h3><div class="price">2.000 <small>LEI / 3 LUNI</small></div>
-    <ul><li>Experiență Transform</li><li>Planificare pe termen mai lung</li><li>Monitorizare pe 3 luni</li><li>Ajustări pe parcurs</li><li>Economisești 400 lei</li></ul>
-    <a class="btn" href="https://payhip.com/b/KhN6L">Cel mai bun preț</a>
-   </div>
-  </div>
- </div>
-</section>
+<div class="container">
+<div class="kicker">Coaching</div>
+<h2 class="section-title">Alege pachetul <span>potrivit pentru tine</span></h2>
+<p class="lead">Toate pachetele sunt disponibile pentru coaching <strong>ONLINE &amp; FIZIC</strong>.</p>
 
+<div class="packages">
+
+<div class="card">
+<h3>Basic</h3>
+<div class="price">500 <small>LEI / LUNĂ</small></div>
+<ul>
+<li>Evaluare inițială</li>
+<li>Program personalizat</li>
+<li>Strategie alimentară</li>
+<li>Check-in săptămânal</li>
+<li>Suport prin mesaje</li>
+</ul>
+<a class="btn alt" href="https://payhip.com/b/vrbl2">Alege pachet</a>
+</div>
+
+<div class="card featured">
+<h3>Transform ⭐</h3>
+<div class="price">800 <small>LEI / LUNĂ</small></div>
+<ul>
+<li>Tot ce include Basic</li>
+<li>Analiză aprofundată</li>
+<li>Ajustări regulate</li>
+<li>Analiză video</li>
+<li>Obiective săptămânale</li>
+<li>Suport prioritar</li>
+</ul>
+<a class="btn" href="https://payhip.com/b/BQTrq">Alege pachet</a>
+</div>
+
+<div class="card">
+<h3>Premium</h3>
+<div class="price">1.000 <small>LEI / LUNĂ</small></div>
+<ul>
+<li>Tot ce include Transform</li>
+<li>Contact prioritar</li>
+<li>Analiză tehnică aprofundată</li>
+<li>Monitorizare atentă</li>
+<li>Ajustări rapide când sunt justificate</li>
+<li>Reevaluări periodice</li>
+</ul>
+<a class="btn alt" href="https://payhip.com/b/7w2Ca">Alege pachet</a>
+</div>
+
+<div class="card featured">
+<h3>Transform 3 luni</h3>
+<div class="price">2.000 <small>LEI / 3 LUNI</small></div>
+<ul>
+<li>Experiență Transform</li>
+<li>Planificare pe termen mai lung</li>
+<li>Monitorizare pe 3 luni</li>
+<li>Ajustări pe parcurs</li>
+<li>Economisești 400 lei</li>
+</ul>
+<a class="btn" href="https://payhip.com/b/KhN6L">Cel mai bun preț</a>
+</div>
+
+</div>
+</div>
+</section>
 <section id="rezultate-forum" style="background:#070707;color:#fff;padding:80px 20px;font-family:Arial,Helvetica,sans-serif">
 <style>
 .vbwrap{max-width:1200px;margin:auto}.vbgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.vbred{color:#e31319}.vbh{font-size:clamp(48px,7vw,92px);line-height:.9;margin:15px 0 25px;font-weight:900}.vbtext{font-size:19px;color:#ccc;line-height:1.7}.vbtiktok{display:inline-block;margin-top:25px;padding:16px 24px;border:1px solid #e31319;border-radius:6px;color:#fff;text-decoration:none;font-weight:900}.vbcard{background:#111;border:1px solid #333;border-radius:16px;padding:35px}.vbcard h2{font-size:34px}.vbcard li{margin:14px 0;color:#ddd}.vbcard li::marker{color:#e31319}.vbbtn{display:block;text-align:center;background:#e31319;color:#fff;text-decoration:none;padding:16px;border-radius:5px;font-weight:900}.vbfeatures{display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;background:#101010;border:1px solid #292929}.vbfeature{padding:30px;border-right:1px solid #333}.vbfeature:last-child{border:0}.vbfeature strong{display:block;font-size:20px;margin-bottom:8px}.vbfeature span{color:#999}.vbbottom{text-align:center;padding-top:65px}.vbbottom h2{font-size:40px}.vbbottom a{display:inline-block;border:1px solid #e31319;color:#fff;text-decoration:none;padding:14px 30px;border-radius:5px;font-weight:900}@media(max-width:800px){.vbgrid,.vbfeatures{grid-template-columns:1fr}.vbfeature{border-right:0;border-bottom:1px solid #333}}
@@ -255,9 +321,9 @@ footer{padding:35px 0;text-align:center;color:#777;font-size:.85rem}
 <div class="vbgrid">
 <div>
 <div class="vbred" style="font-weight:900;letter-spacing:3px;text-transform:uppercase">Transformarea ta începe acum</div>
-<h2 class="vbh">REZULTATELE<br><span class="vbred">VORBESC.</span></h2>
+<h2 class="vbh">REZULTATELE<br/><span class="vbred">VORBESC.</span></h2>
 <p class="vbtext">Vrei să vezi <strong class="vbred">rezultate reale, rezumate și îndrumări</strong> care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.</p>
-<a class="vbtiktok" href="https://www.tiktok.com/@vio.bulz8" target="_blank" rel="noopener">URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8</a>
+<a class="vbtiktok" href="https://www.tiktok.com/@vio.bulz8" rel="noopener" target="_blank">URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8</a>
 </div>
 <div class="vbcard">
 <h2>VREI SĂ <span class="vbred">AFLI MAI MULTE?</span></h2>
@@ -270,78 +336,146 @@ footer{padding:35px 0;text-align:center;color:#777;font-size:.85rem}
 <div class="vbfeature"><strong>ÎNDRUMARE CORECTĂ</strong><span>Informații clare și aplicate.</span></div>
 <div class="vbfeature"><strong>OBIECTIVE ATINSE</strong><span>Cu plan, disciplină și consecvență.</span></div>
 </div>
-<div class="vbbottom"><h2><span class="vbred">VIO BULZ</span> — COACHING & ÎNDRUMARE</h2><p class="vbtext">Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.</p><a href="Vio_Bulz_Contact.html">CONTACT →</a></div>
+<div class="vbbottom"><h2><span class="vbred">VIO BULZ</span> — COACHING &amp; ÎNDRUMARE</h2><p class="vbtext">Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.</p><a href="Vio_Bulz_Contact.html">CONTACT →</a></div>
 </div></section>
 
 <section>
- <div class="container faq">
-  <div class="kicker">FAQ</div>
-  <h2 class="section-title">Întrebări <span>frecvente</span></h2>
-  <details><summary>Pot face coaching dacă sunt începător?</summary><p>Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.</p></details>
-  <details><summary>Pot face coaching online?</summary><p>Da. Coaching-ul este disponibil atât online, cât și fizic.</p></details>
-  <details><summary>Trebuie să țin o dietă strictă?</summary><p>Strategia alimentară este adaptată obiectivului și stilului tău de viață.</p></details>
-  <details><summary>Cât durează până văd rezultate?</summary><p>Depinde de punctul de plecare, obiectiv și consecvență. Nu există o durată universală.</p></details>
-  <details><summary>Cum încep?</summary><p>Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.</p></details>
+<div class="container faq">
+<div class="kicker">FAQ</div>
+<h2 class="section-title">Întrebări <span>frecvente</span></h2>
+<details><summary>Pot face coaching dacă sunt începător?</summary><p>Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.</p></details>
+<details><summary>Pot face coaching online?</summary><p>Da. Coaching-ul este disponibil atât online, cât și fizic.</p></details>
+<details><summary>Trebuie să țin o dietă strictă?</summary><p>Strategia alimentară este adaptată obiectivului și stilului tău de viață.</p></details>
+<details><summary>Cât durează până văd rezultate?</summary><p>Depinde de punctul de plecare, obiectiv și consecvență. Nu există o durată universală.</p></details>
+<details><summary>Cum încep?</summary><p>Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.</p></details>
 </div>
 </section>
 
-<section id="incepe" class="cta">
- <div class="container">
-  <h2>EȘTI PREGĂTIT <span style="color:var(--red)">SĂ ÎNCEPI?</span></h2>
-  <p class="lead" style="margin:20px auto">Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.</p>
-  <a class="btn" href="#">Vreau să încep</a>
- </div>
+<section class="cta" id="incepe">
+<div class="container">
+<h2>EȘTI PREGĂTIT <span style="color:var(--red)">SĂ ÎNCEPI?</span></h2>
+<p class="lead" style="margin:20px auto">Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.</p>
+<a class="btn" href="#">Vreau să încep</a>
+</div>
 </section>
+
 <!-- GHIDUL COMPLET DE FITNESS & COACHING -->
 <section style="text-align:center;padding:60px 20px;background:#101010;">
-  <div style="max-width:900px;margin:auto;">
-
-    <h2 style="font-size:32px;margin-bottom:15px;">
-      GHIDUL COMPLET DE <span style="color:#e3b139;">FITNESS & COACHING</span>
-    </h2>
-
-    <p style="font-size:18px;max-width:700px;margin:0 auto 25px;color:#b9b9b9;">
-      Antrenament • Nutriție • Anatomie • Coaching
-    </p>
-
-    <p style="max-width:700px;margin:0 auto 30px;">
-      Un ghid practic pentru cei care vor să-și construiască un corp puternic,
-      sănătos și echilibrat, cu informații clare și aplicabile despre antrenament,
-      nutriție, anatomie și coaching.
-    </p>
-
-    <div style="font-size:28px;font-weight:bold;margin-bottom:25px;">
-      55 LEI
-    </div>
-
-    <a href="https://payhip.com/b/8DgmA"
-       target="_blank"
-       rel="noopener"
-       style="display:inline-block;background:#e3b139;color:#000;
-       padding:16px 35px;border-radius:8px;text-decoration:none;
-       font-weight:bold;font-size:18px;">
-       CUMPĂRĂ GHIDUL
-    </a>
-
-  </div>
+<div style="max-width:900px;margin:auto;">
+<h2 style="font-size:32px;margin-bottom:15px;">
+GHIDUL COMPLET DE <span style="color:#e3b139;">FITNESS &amp; COACHING</span>
+</h2>
+<p style="font-size:18px;max-width:700px;margin:0 auto 25px;color:#b9b9b9;">
+Antrenament • Nutriție • Anatomie • Coaching
+</p>
+<p style="max-width:700px;margin:0 auto 30px;">
+Un ghid practic pentru cei care vor să-și construiască un corp puternic,
+sănătos și echilibrat, cu informații clare și aplicabile despre antrenament,
+nutriție, anatomie și coaching.
+</p>
+<div style="font-size:28px;font-weight:bold;margin-bottom:25px;">
+55 LEI
+</div>
+<a href="https://payhip.com/b/8DgmA" rel="noopener" style="display:inline-block;background:#e3b139;color:#000;
+padding:16px 35px;border-radius:8px;text-decoration:none;
+font-weight:bold;font-size:18px;" target="_blank">
+CUMPĂRĂ GHIDUL
+</a>
+</div>
 </section>
+
 <footer>
- <div class="container">
-  <div>VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT</div>
-  <div style="margin-top:12px;">
-   Membru acreditat FRCF — Federația Română de Culturism și Fitness
-  </div>
-  <div style="margin-top:8px;">
-   TikTok:
-   <a href="https://www.tiktok.com/@vio.bulz8" target="_blank" rel="noopener" style="color:#fff;font-weight:800;">@vio.bulz8</a>
-  </div>
- </div>
+<div class="container">
+<div>VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT</div>
+<div style="margin-top:12px;">
+Membru acreditat FRCF — Federația Română de Culturism și Fitness
+</div>
+<div style="margin-top:8px;">
+TikTok:
+<a href="https://www.tiktok.com/@vio.bulz8" rel="noopener" style="color:#fff;font-weight:800;" target="_blank">@vio.bulz8</a>
+</div>
+</div>
 </footer>
+<section id="rezultate-forum" style="background:#070707;color:#fff;padding:80px 20px;font-family:Arial,Helvetica,sans-serif">
+<style>
+.vbwrap{max-width:1200px;margin:auto}.vbgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.vbred{color:#e31319}.vbh{font-size:clamp(48px,7vw,92px);line-height:.9;margin:15px 0 25px;font-weight:900}.vbtext{font-size:19px;color:#ccc;line-height:1.7}.vbtiktok{display:inline-block;margin-top:25px;padding:16px 24px;border:1px solid #e31319;border-radius:6px;color:#fff;text-decoration:none;font-weight:900}.vbcard{background:#111;border:1px solid #333;border-radius:16px;padding:35px}.vbcard h2{font-size:34px}.vbcard li{margin:14px 0;color:#ddd}.vbcard li::marker{color:#e31319}.vbbtn{display:block;text-align:center;background:#e31319;color:#fff;text-decoration:none;padding:16px;border-radius:5px;font-weight:900}.vbfeatures{display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;background:#101010;border:1px solid #292929}.vbfeature{padding:30px;border-right:1px solid #333}.vbfeature:last-child{border:0}.vbfeature strong{display:block;font-size:20px;margin-bottom:8px}.vbfeature span{color:#999}.vbbottom{text-align:center;padding-top:65px}.vbbottom h2{font-size:40px}.vbbottom a{display:inline-block;border:1px solid #e31319;color:#fff;text-decoration:none;padding:14px 30px;border-radius:5px;font-weight:900}@media(max-width:800px){.vbgrid,.vbfeatures{grid-template-columns:1fr}.vbfeature{border-right:0;border-bottom:1px solid #333}}
+</style>
+<div class="vbwrap">
+<div class="vbgrid">
+<div>
+<div class="vbred" style="font-weight:900;letter-spacing:3px;text-transform:uppercase">Transformarea ta începe acum</div>
+<h2 class="vbh">REZULTATELE<br/><span class="vbred">VORBESC.</span></h2>
+<p class="vbtext">Vrei să vezi <strong class="vbred">rezultate reale, rezumate și îndrumări</strong> care te pot ajuta? Urmărește-mă pe TikTok pentru conținut zilnic, transformări, antrenamente și sfaturi practice.</p>
+<a class="vbtiktok" href="https://www.tiktok.com/@vio.bulz8" rel="noopener" target="_blank">URMĂREȘTE-MĂ PE TIKTOK → @vio.bulz8</a>
+</div>
+<div class="vbcard">
+<h2>VREI SĂ <span class="vbred">AFLI MAI MULTE?</span></h2>
+<p class="vbtext">Pentru rezultate, îndrumare și informații despre coaching, mă poți contacta direct. Îți răspund și te ajut să alegi cea mai potrivită variantă pentru obiectivul tău.</p>
+<ul><li>Îndrumare și informații despre antrenament</li><li>Discuții despre nutriție și progres</li><li>Informații despre coaching online și fizic</li><li>Răspunsuri direct de la Vio Bulz</li></ul>
+<a class="vbbtn" href="Vio_Bulz_Contact.html">CONTACT →</a>
+</div></div>
+<div class="vbfeatures">
+<div class="vbfeature"><strong>REZULTATE REALE</strong><span>Transformări autentice și progres.</span></div>
+<div class="vbfeature"><strong>ÎNDRUMARE CORECTĂ</strong><span>Informații clare și aplicate.</span></div>
+<div class="vbfeature"><strong>OBIECTIVE ATINSE</strong><span>Cu plan, disciplină și consecvență.</span></div>
+</div>
+<div class="vbbottom"><h2><span class="vbred">VIO BULZ</span> — COACHING &amp; ÎNDRUMARE</h2><p class="vbtext">Vrei să vezi mai multe rezultate, transformări și sfaturi practice? Urmărește-mă pe TikTok sau contactează-mă direct.</p><a href="Vio_Bulz_Contact.html">CONTACT →</a></div>
+</div></section>
 
-<!-- VIO BULZ COACHING - PACHETE -->
-<section style="text-align:center;padding:40px 20px;background:#0b0b0b;">
-  <a href="#pachete" style="display:inline-block;background:#e31319;color:#fff;text-decoration:none;padding:16px 28px;font-weight:900;text-transform:uppercase;border-radius:3px;">VEZI PACHETELE DE COACHING</a>
+<section>
+<div class="container faq">
+<div class="kicker">FAQ</div>
+<h2 class="section-title">Întrebări <span>frecvente</span></h2>
+<details><summary>Pot face coaching dacă sunt începător?</summary><p>Da. Planul se construiește în funcție de nivelul de pornire și obiectivul tău.</p></details>
+<details><summary>Pot face coaching online?</summary><p>Da. Coaching-ul este disponibil atât online, cât și fizic.</p></details>
+<details><summary>Trebuie să țin o dietă strictă?</summary><p>Strategia alimentară este adaptată obiectivului și stilului tău de viață.</p></details>
+<details><summary>Cât durează până văd rezultate?</summary><p>Depinde de punctul de plecare, obiectiv și consecvență. Nu există o durată universală.</p></details>
+<details><summary>Cum încep?</summary><p>Completezi evaluarea, discutăm obiectivul și alegem împreună varianta de coaching potrivită.</p></details>
+</div>
 </section>
 
-</body>
-</html>
+<section class="cta" id="incepe">
+<div class="container">
+<h2>EȘTI PREGĂTIT <span style="color:var(--red)">SĂ ÎNCEPI?</span></h2>
+<p class="lead" style="margin:20px auto">Nu trebuie să fii deja în formă. Trebuie doar să fii pregătit să începi.</p>
+<a class="btn" href="#">Vreau să încep</a>
+</div>
+</section>
+
+<!-- GHIDUL COMPLET DE FITNESS & COACHING -->
+<section style="text-align:center;padding:60px 20px;background:#101010;">
+<div style="max-width:900px;margin:auto;">
+<h2 style="font-size:32px;margin-bottom:15px;">
+GHIDUL COMPLET DE <span style="color:#e3b139;">FITNESS &amp; COACHING</span>
+</h2>
+<p style="font-size:18px;max-width:700px;margin:0 auto 25px;color:#b9b9b9;">
+Antrenament • Nutriție • Anatomie • Coaching
+</p>
+<p style="max-width:700px;margin:0 auto 30px;">
+Un ghid practic pentru cei care vor să-și construiască un corp puternic,
+sănătos și echilibrat, cu informații clare și aplicabile despre antrenament,
+nutriție, anatomie și coaching.
+</p>
+<div style="font-size:28px;font-weight:bold;margin-bottom:25px;">
+55 LEI
+</div>
+<a href="https://payhip.com/b/8DgmA" rel="noopener" style="display:inline-block;background:#e3b139;color:#000;
+padding:16px 35px;border-radius:8px;text-decoration:none;
+font-weight:bold;font-size:18px;" target="_blank">
+CUMPĂRĂ GHIDUL
+</a>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div>VIO BULZ COACHING • ONLINE • FIZIC • PERSONALIZAT</div>
+<div style="margin-top:12px;">
+Membru acreditat FRCF — Federația Română de Culturism și Fitness
+</div>
+<div style="margin-top:8px;">
+TikTok:
+<a href="https://www.tiktok.com/@vio.bulz8" rel="noopener" style="color:#fff;font-weight:800;" target="_blank">@vio.bulz8</a>
+</div>
+</div>
+</footer>
