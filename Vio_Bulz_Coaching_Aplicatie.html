@@ -1,412 +1,429 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Aplică pentru Vio Bulz Coaching</title>
-
 <style>
-:root{
-  --bg:#070707;
-  --panel:#111;
-  --text:#f5f5f5;
-  --muted:#aaa;
-  --red:#e31319;
-  --line:#2a2a2a;
-}
-
+:root{--bg:#070707;--panel:#111;--text:#f5f5f5;--muted:#aaa;--red:#e31319;--line:#2a2a2a}
 *{box-sizing:border-box}
-
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.55;
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.container{width:min(760px,92%);margin:auto}
+.top{text-align:center;padding:70px 0 35px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--red);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.3rem,7vw,4.5rem);line-height:.95;margin:16px 0}
+h1 span{color:var(--red)}
+.lead{color:var(--muted);font-size:1.05rem}
+form{padding:45px 0 70px}.group{margin:0 0 24px}
+label{display:block;font-weight:800;margin-bottom:8px}
+input,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--text);padding:14px;border-radius:4px;font-size:1rem}
+textarea{min-height:130px;resize:vertical}
+.options{display:grid;gap:10px}
+.option{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);padding:12px}
+.option input{width:auto}
+.note{font-size:.85rem;color:#888;margin-top:6px}
+.consent{display:flex;gap:10px;align-items:flex-start;color:#aaa;font-size:.9rem}
+.consent input{width:auto;margin-top:4px}
+button{width:100%;border:0;background:var(--red);color:#fff;font-weight:900;padding:17px;border-radius:4px;font-size:1rem;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+.back{text-align:center;padding-bottom:45px}
+.back a{color:#fff;text-decoration:none}
+</style>
+<style>
+#lang-switcher{
+position:fixed;top:16px;right:16px;z-index:9999;
+display:flex;gap:6px;background:#111;border:1px solid #333;
+padding:6px;border-radius:8px;box-shadow:0 8px 25px rgba(0,0,0,.35)
 }
-
-.container{
-  width:min(760px,92%);
-  margin:auto;
+#lang-switcher button{
+border:1px solid #444;background:#181818;color:#fff;padding:7px 9px;
+border-radius:5px;font-weight:800;cursor:pointer
 }
-
-.top{
-  text-align:center;
-  padding:70px 0 35px;
-  border-bottom:1px solid var(--line);
-}
-
-.kicker{
-  color:var(--red);
-  font-weight:800;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  font-size:.8rem;
-}
-
-h1{
-  font-size:clamp(2.3rem,7vw,4.5rem);
-  line-height:.95;
-  margin:16px 0;
-}
-
-h1 span{
-  color:var(--red);
-}
-
-.lead{
-  color:var(--muted);
-  font-size:1.05rem;
-}
-
-.language-box{
-  margin:25px auto 0;
-  max-width:300px;
-}
-
-.language-box label{
-  display:block;
-  font-weight:800;
-  margin-bottom:8px;
-  text-align:left;
-}
-
-form{
-  padding:45px 0 70px;
-}
-
-.group{
-  margin:0 0 24px;
-}
-
-label{
-  display:block;
-  font-weight:800;
-  margin-bottom:8px;
-}
-
-input,select,textarea{
-  width:100%;
-  background:var(--panel);
-  border:1px solid var(--line);
-  color:var(--text);
-  padding:14px;
-  border-radius:4px;
-  font-size:1rem;
-}
-
-textarea{
-  min-height:130px;
-  resize:vertical;
-}
-
-.options{
-  display:grid;
-  gap:10px;
-}
-
-.option{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  background:var(--panel);
-  border:1px solid var(--line);
-  padding:12px;
-}
-
-.option input{
-  width:auto;
-}
-
-.note{
-  font-size:.85rem;
-  color:#888;
-  margin-top:6px;
-}
-
-.consent{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  color:#aaa;
-  font-size:.9rem;
-}
-
-.consent input{
-  width:auto;
-  margin-top:4px;
-}
-
-button{
-  width:100%;
-  border:0;
-  background:var(--red);
-  color:#fff;
-  font-weight:900;
-  padding:17px;
-  border-radius:4px;
-  font-size:1rem;
-  text-transform:uppercase;
-  letter-spacing:.6px;
-  cursor:pointer;
-}
-
-.back{
-  text-align:center;
-  padding-bottom:45px;
-}
-
-.back a{
-  color:#fff;
-  text-decoration:none;
-}
+#lang-switcher button.active{background:#e31319;border-color:#e31319}
 </style>
 </head>
 
 <body>
+<div id="lang-switcher">
+<button data-lang="ro" type="button">RO</button>
+<button data-lang="es" type="button">ES</button>
+<button data-lang="en" type="button">EN</button>
+</div>
 
 <header class="top">
 <div class="container">
-
-<div class="kicker" id="kicker">Vio Bulz Coaching</div>
-
-<h1 id="title">
-APLICĂ PENTRU<br>
-<span>COACHING</span>
-</h1>
-
-<p class="lead" id="intro">
-Completează formularul de mai jos. Îți voi analiza răspunsurile și te voi contacta pentru a discuta obiectivul tău și următorii pași.
-</p>
-
-<div class="language-box">
-<label for="language" id="languageLabel">Țara / Limba</label>
-
-<select id="language">
-<option value="ro">🇷🇴 România — Română</option>
-<option value="es">🇪🇸 España — Español</option>
-</select>
-</div>
-
+<div class="kicker">Vio Bulz Coaching</div>
+<h1>APLICĂ PENTRU<br/><span>COACHING</span></h1>
+<p class="lead">Completează formularul de mai jos. Îți voi analiza răspunsurile și te voi contacta pentru a discutăm obiectivul tău și următorii pași.</p>
 </div>
 </header>
 
 <main class="container">
-
 <form action="https://formsubmit.co/viorelbulz90@gmail.com" method="POST">
+<input name="_subject" type="hidden" value="Nouă aplicație — Vio Bulz Coaching"/>
+<input name="_template" type="hidden" value="table"/>
+<input name="_captcha" type="hidden" value="true"/>
+<input name="_autoresponse" type="hidden" value="Salut! Am primit aplicația ta pentru Vio Bulz Coaching. Îți mulțumesc pentru încredere! Voi analiza răspunsurile tale și te voi contacta pentru următorii pași. — Vio Bulz"/>
+<input name="_next" type="hidden" value="Vio_Bulz_Coaching_Multumesc.html"/>
+<input name="_honey" style="display:none" type="text"/>
 
-<input type="hidden" name="_subject" value="Nouă aplicație — Vio Bulz Coaching">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true">
-
-<input type="hidden" name="_autoresponse"
-value="Salut! Am primit aplicația ta pentru Vio Bulz Coaching. Îți mulțumesc pentru încredere! Voi analiza răspunsurile tale și te voi contacta pentru următorii pași. — Vio Bulz">
-
-<input type="hidden" name="_next" value="Vio_Bulz_Coaching_Multumesc.html">
-
-<input type="text" name="_honey" style="display:none"><div class="group">
-<label for="name" id="nameLabel">Nume și prenume *</label>
-<input id="name" name="Nume și prenume" required>
+<div class="group">
+<label for="name">Nume și prenume *</label>
+<input id="name" name="Nume și prenume" required=""/>
 </div>
 
 <div class="group">
-<label for="age" id="ageLabel">Vârsta *</label>
-<input id="age" name="Vârstă" type="number" min="16" max="100" required>
+<label for="age">Vârsta *</label>
+<input id="age" max="100" min="16" name="Vârstă" required="" type="number"/>
 </div>
 
 <div class="group">
-<label for="email" id="emailLabel">Email *</label>
-<input id="email" name="email" type="email" required>
+<label for="email">Email *</label>
+<input id="email" name="email" required="" type="email"/>
 </div>
 
 <div class="group">
-<label for="phone" id="phoneLabel">Telefon / WhatsApp *</label>
-<input id="phone" name="Telefon / WhatsApp" type="tel" required>
+<label for="phone">Telefon / WhatsApp *</label>
+<input id="phone" name="Telefon / WhatsApp" required="" type="tel"/>
 </div>
 
 <div class="group">
-<label id="coachingLabel">Ce tip de coaching te interesează? *</label>
-
+<label id="coaching-type-label">Ce tip de coaching te interesează? *</label>
 <div class="options">
-
-<label class="option">
-<input type="radio" name="Tip coaching" value="ONLINE" required>
-<span id="onlineText">ONLINE</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Tip coaching" value="FIZIC">
-<span id="physicalText">FIZIC</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Tip coaching" value="ONLINE + FIZIC">
-<span id="bothText">ONLINE + FIZIC</span>
-</label>
-
+<label class="option"><input name="Tip coaching" required="" type="radio" value="ONLINE"/> ONLINE</label>
+<label class="option"><input name="Tip coaching" type="radio" value="FIZIC"/> FIZIC</label>
+<label class="option"><input name="Tip coaching" type="radio" value="ONLINE + FIZIC"/> ONLINE + FIZIC</label>
 </div>
 </div>
 
 <div class="group">
-<label for="goal" id="goalLabel">Care este obiectivul tău principal? *</label>
-
-<select id="goal" name="Obiectiv principal" required>
-<option value="" id="goalPlaceholder">Alege o variantă</option>
-<option value="Masă musculară" id="goalMuscle">Masă musculară</option>
-<option value="Slăbire" id="goalLoss">Slăbire</option>
-<option value="Recompunere corporală" id="goalRecomp">Recompunere corporală</option>
-<option value="Forță" id="goalStrength">Forță</option>
-<option value="Condiție fizică" id="goalFitness">Condiție fizică</option>
-<option value="Alt obiectiv" id="goalOther">Alt obiectiv</option>
+<label for="goal">Care este obiectivul tău principal? *</label>
+<select id="goal" name="Obiectiv principal" required="">
+<option value="">Alege o variantă</option>
+<option>Masă musculară</option>
+<option>Slăbire</option>
+<option>Recompunere corporală</option>
+<option>Forță</option>
+<option>Condiție fizică</option>
+<option>Alt obiectiv</option>
 </select>
 </div>
 
 <div class="group">
-<label for="goaltext" id="goalTextLabel">
-Spune-mi mai exact ce vrei să obții. *
-</label>
-
-<textarea id="goaltext" name="Obiectiv detaliat" required></textarea>
+<label for="goaltext">Spune-mi mai exact ce vrei să obții. *</label>
+<textarea id="goaltext" name="Obiectiv detaliat" required=""></textarea>
 </div>
 
 <div class="group">
-<label for="experience" id="experienceLabel">
-De cât timp te antrenezi?
-</label>
-
+<label for="experience">De cât timp te antrenezi?</label>
 <select id="experience" name="Experiență sală">
-
-<option value="" id="experiencePlaceholder">
-Alege o variantă
-</option>
-
-<option value="Sunt începător" id="experienceBeginner">
-Sunt începător
-</option>
-
-<option value="Sub 6 luni" id="experience6">
-Sub 6 luni
-</option>
-
-<option value="6–12 luni" id="experience12">
-6–12 luni
-</option>
-
-<option value="1–2 ani" id="experience2">
-1–2 ani
-</option>
-
-<option value="Peste 2 ani" id="experienceMore">
-Peste 2 ani
-</option>
-
+<option value="">Alege o variantă</option>
+<option>Sunt începător</option>
+<option>Sub 6 luni</option>
+<option>6–12 luni</option>
+<option>1–2 ani</option>
+<option>Peste 2 ani</option>
 </select>
 </div>
 
 <div class="group">
-<label for="frequency" id="frequencyLabel">
-De câte ori pe săptămână poți să te antrenezi?
-</label>
-
+<label for="frequency">De câte ori pe săptămână poți să te antrenezi?</label>
 <select id="frequency" name="Frecvență antrenamente">
-
-<option value="" id="frequencyPlaceholder">
-Alege o variantă
-</option>
-
-<option value="2 ori">2 ori</option>
-<option value="3 ori">3 ori</option>
-<option value="4 ori">4 ori</option>
-<option value="5 ori">5 ori</option>
-<option value="6+ ori">6+ ori</option>
-
+<option value="">Alege o variantă</option>
+<option>2 ori</option><option>3 ori</option><option>4 ori</option><option>5 ori</option><option>6+ ori</option>
 </select>
-</div><div class="group">
-<label id="packageLabel">Ce pachet te interesează acum?</label>
-
+</div>
+<div class="group">
+<label id="package-label">Ce pachet te interesează acum?</label>
 <div class="options">
-
-<label class="option">
-<input type="radio" name="Pachet dorit" value="Basic">
-<span id="basicText">Basic</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Pachet dorit" value="Transform">
-<span id="transformText">Transform</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Pachet dorit" value="Premium">
-<span id="premiumText">Premium</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Pachet dorit" value="Transform 3 luni">
-<span id="transform3Text">Transform 3 luni</span>
-</label>
-
-<label class="option">
-<input type="radio" name="Pachet dorit" value="Nu știu încă">
-<span id="dontKnowText">Nu știu încă — vreau să discutăm</span>
-</label>
-
+<label class="option"><input name="Pachet dorit" type="radio" value="Basic — 500 lei/lună"/> Basic — 500 lei/lună</label>
+<label class="option"><input name="Pachet dorit" type="radio" value="Transform — 800 lei/lună"/> Transform — 800 lei/lună</label>
+<label class="option"><input name="Pachet dorit" type="radio" value="Premium — 1.000 lei/lună"/> Premium — 1.000 lei/lună</label>
+<label class="option"><input name="Pachet dorit" type="radio" value="Transform 3 luni — 2.000 lei"/> Transform 3 luni — 2.000 lei</label>
+<label class="option"><input name="Pachet dorit" type="radio" value="Nu știu încă — vreau să discutăm"/> Nu știu încă — vreau să discutăm</label>
 </div>
 </div>
 
 <div class="group">
-<label for="why" id="whyLabel">
-De ce vrei să începi coaching-ul acum? *
-</label>
-
-<textarea id="why" name="De ce acum" required></textarea>
+<label for="why">De ce vrei să începi coaching-ul acum? *</label>
+<textarea id="why" name="De ce acum" required=""></textarea>
 </div>
 
 <div class="group">
-<label for="coach" id="coachLabel">
-Ai mai lucrat cu un antrenor?
-</label>
-
+<label for="coach">Ai mai lucrat cu un antrenor?</label>
 <select id="coach" name="Experiență cu antrenor">
-
-<option value="" id="coachPlaceholder">
-Alege o variantă
-</option>
-
-<option value="Da" id="coachYes">Da</option>
-<option value="Nu" id="coachNo">Nu</option>
-
+<option value="">Alege o variantă</option>
+<option>Da</option>
+<option>Nu</option>
 </select>
 </div>
 
 <div class="group">
-<label for="extra" id="extraLabel">
-Mai este ceva ce ai vrea să știu înainte să te contactez?
-</label>
-
+<label for="extra">Mai este ceva ce ai vrea să știu înainte să te contactez?</label>
 <textarea id="extra" name="Informații suplimentare"></textarea>
 </div>
 
 <div class="group consent">
-
-<input id="consent" type="checkbox" name="Acord contact" value="Da" required>
-
-<label for="consent" id="consentLabel">
-Sunt de acord ca Vio Bulz Coaching să mă contacteze în legătură cu această solicitare.
-</label>
-
+<input id="consent" name="Acord contact" required="" type="checkbox" value="Da"/>
+<label for="consent">Sunt de acord ca Vio Bulz Coaching să mă contacteze în legătură cu această solicitare.</label>
 </div>
 
-<button type="submit" id="submitButton">
-Trimite aplicația
-</button>
-
+<button type="submit">Trimite aplicația</button>
 </form>
 
 <div class="back">
-<a href="Vio_Bulz_Coaching_Landing_Page.html" id="backLink">
-← Înapoi la Vio Bulz Coaching
-</a>
+<a href="Vio_Bulz_Coaching_Landing_Page.html">← Înapoi la Vio Bulz Coaching</a>
 </div>
 
 </main>
+<script>
+(function(){
+  const LANG = {
+    ro: {
+      title:"Aplică pentru Vio Bulz Coaching",
+      kicker:"Vio Bulz Coaching",
+      h1a:"APLICĂ PENTRU", h1b:"COACHING",
+      lead:"Completează formularul de mai jos. Îți voi analiza răspunsurile și te voi contacta pentru a discutăm obiectivul tău și următorii pași.",
+      name:"Nume și prenume *", age:"Vârsta *", email:"Email *", phone:"Telefon / WhatsApp *",
+      coaching:"Ce tip de coaching te interesează? *", online:"ONLINE", fizic:"FIZIC", both:"ONLINE + FIZIC",
+      goal:"Care este obiectivul tău principal? *", choose:"Alege o variantă",
+      muscle:"Masă musculară", lose:"Slăbire", recomp:"Recompunere corporală", strength:"Forță", fitness:"Condiție fizică", other:"Alt obiectiv",
+      goaltext:"Spune-mi mai exact ce vrei să obții. *",
+      exp:"De cât timp te antrenezi?", beginner:"Sunt începător", under6:"Sub 6 luni", six12:"6–12 luni", one2:"1–2 ani", over2:"Peste 2 ani",
+      freq:"De câte ori pe săptămână poți să te antrenezi?", two:"2 ori", three:"3 ori", four:"4 ori", five:"5 ori", sixplus:"6+ ori",
+      pack:"Ce pachet te interesează acum?", basic:"Basic — 500 lei/lună", transform:"Transform — 800 lei/lună", premium:"Premium — 1.000 lei/lună", threeMonths:"Transform 3 luni — 2.000 lei", unsure:"Nu știu încă — vreau să discutăm",
+      why:"De ce vrei să începi coaching-ul acum? *", coach:"Ai mai lucrat cu un antrenor?", yes:"Da", no:"Nu",
+      extra:"Mai este ceva ce ai vrea să știu înainte să te contactez?",
+      consent:"Sunt de acord ca Vio Bulz Coaching să mă contacteze în legătură cu această solicitare.",
+      submit:"Trimite aplicația", back:"← Înapoi la Vio Bulz Coaching",
+      subject:"Nouă aplicație — Vio Bulz Coaching",
+      autoresponse:"Salut! Am primit aplicația ta pentru Vio Bulz Coaching. Îți mulțumesc pentru încredere! Voi analiza răspunsurile tale și te voi contacta pentru următorii pași. — Vio Bulz"
+    },
+
+    es: {
+      title:"Solicita Vio Bulz Coaching",
+      kicker:"Vio Bulz Coaching",
+      h1a:"SOLICITA", h1b:"COACHING",
+      lead:"Completa el formulario. Analizaré tus respuestas y me pondré en contacto contigo para hablar sobre tu objetivo y los próximos pasos.",
+      name:"Nombre y apellidos *", age:"Edad *", email:"Email *", phone:"Teléfono / WhatsApp *",
+      coaching:"¿Qué tipo de coaching te interesa? *", online:"ONLINE", fizic:"PRESENCIAL", both:"ONLINE + PRESENCIAL",
+      goal:"¿Cuál es tu objetivo principal? *", choose:"Elige una opción",
+      muscle:"Ganar masa muscular", lose:"Perder grasa", recomp:"Recomposición corporal", strength:"Fuerza", fitness:"Condición física", other:"Otro objetivo",
+      goaltext:"Cuéntame con más detalle qué quieres conseguir. *",
+      exp:"¿Cuánto tiempo llevas entrenando?", beginner:"Soy principiante", under6:"Menos de 6 meses", six12:"6–12 meses", one2:"1–2 años", over2:"Más de 2 años",
+      freq:"¿Cuántas veces por semana puedes entrenar?", two:"2 veces", three:"3 veces", four:"4 veces", five:"5 veces", sixplus:"6+ veces",
+      pack:"¿Qué paquete te interesa ahora?", basic:"Basic — 100 €/mes", transform:"Transform — 160 €/mes", premium:"Premium — 200 €/mes", threeMonths:"Transform 3 meses — 400 €", unsure:"Aún no lo sé — quiero hablarlo",
+      why:"¿Por qué quieres empezar coaching ahora? *", coach:"¿Has trabajado antes con un entrenador?", yes:"Sí", no:"No",
+      extra:"¿Hay algo más que quieras que sepa antes de contactarte?",
+      consent:"Acepto que Vio Bulz Coaching se ponga en contacto conmigo en relación con esta solicitud.",
+      submit:"ENVIAR SOLICITUD", back:"← Volver a Vio Bulz Coaching",
+      subject:"Nueva solicitud — Vio Bulz Coaching",
+      autoresponse:"¡Hola! Hemos recibido tu solicitud para Vio Bulz Coaching. Gracias por tu confianza. Analizaré tus respuestas y me pondré en contacto contigo para los próximos pasos. — Vio Bulz"
+    },
+
+    en: {
+      title:"Apply for Vio Bulz Coaching",
+      kicker:"Vio Bulz Coaching",
+      h1a:"APPLY FOR", h1b:"COACHING",
+      lead:"Complete the form below. I’ll review your answers and contact you to discuss your goal and next steps.",
+      name:"Full name *", age:"Age *", email:"Email *", phone:"Phone / WhatsApp *",
+      coaching:"What type of coaching are you interested in? *", online:"ONLINE", fizic:"IN PERSON", both:"ONLINE + IN PERSON",
+      goal:"What is your main goal? *", choose:"Choose an option",
+      muscle:"Muscle gain", lose:"Fat loss", recomp:"Body recomposition", strength:"Strength", fitness:"Fitness", other:"Other goal",
+      goaltext:"Tell me more specifically what you want to achieve. *",
+      exp:"How long have you been training?", beginner:"I’m a beginner", under6:"Under 6 months", six12:"6–12 months", one2:"1–2 years", over2:"Over 2 years",
+      freq:"How many times per week can you train?", two:"2 times", three:"3 times", four:"4 times", five:"5 times", sixplus:"6+ times",
+      pack:"Which package are you interested in now?", basic:"Basic — €100/month", transform:"Transform — €160/month", premium:"Premium — €200/month", threeMonths:"Transform 3 months — €400", unsure:"Not sure yet — I’d like to discuss",
+      why:"Why do you want to start coaching now? *", coach:"Have you worked with a coach before?", yes:"Yes", no:"No",
+      extra:"Is there anything else you would like me to know before I contact you?",
+      consent:"I agree that Vio Bulz Coaching may contact me regarding this request.",
+      submit:"SUBMIT APPLICATION", back:"← Back to Vio Bulz Coaching",
+      subject:"New application — Vio Bulz Coaching",
+      autoresponse:"Hi! We received your Vio Bulz Coaching application. Thank you for your trust! I’ll review your answers and contact you regarding the next steps. — Vio Bulz"
+    }
+  };
+
+  const priceValues = {
+    ro:[
+      "Basic — 500 lei/lună",
+      "Transform — 800 lei/lună",
+      "Premium — 1.000 lei/lună",
+      "Transform 3 luni — 2.000 lei",
+      "Nu știu încă — vreau să discutăm"
+    ],
+    es:[
+      "Basic — 100 €/mes",
+      "Transform — 160 €/mes",
+      "Premium — 200 €/mes",
+      "Transform 3 meses — 400 €",
+      "Aún no lo sé — quiero hablarlo"
+    ],
+    en:[
+      "Basic — €100/month",
+      "Transform — €160/month",
+      "Premium — €200/month",
+      "Transform 3 months — €400",
+      "Not sure yet — I’d like to discuss"
+    ]
+  };
+
+  function setText(selector,text){
+    const el=document.querySelector(selector);
+    if(el) el.textContent=text;
+  }
+
+  function setLabel(forId,text){
+    const l=document.querySelector('label[for="'+forId+'"]');
+    if(l) l.textContent=text;
+  }
+
+  function setOptions(select,values){
+    if(!select) return;
+    [...select.options].forEach((o,i)=>{
+      if(values[i]!==undefined) o.textContent=values[i];
+    });
+  }
+
+  function apply(lang){
+    const t=LANG[lang]||LANG.ro;
+
+    document.documentElement.lang=lang;
+    document.title=t.title;
+
+    document.querySelectorAll("#lang-switcher button").forEach(b=>{
+      b.classList.toggle("active",b.dataset.lang===lang);
+    });
+
+    setText(".kicker",t.kicker);
+
+    const h1=document.querySelector("h1");
+
+    if(h1){
+      h1.childNodes[0].nodeValue=t.h1a+" ";
+      const span=h1.querySelector("span");
+      if(span) span.textContent=t.h1b;
+    }
+
+    setText(".lead",t.lead);
+
+    setLabel("name",t.name);
+    setLabel("age",t.age);
+    setLabel("email",t.email);
+    setLabel("phone",t.phone);
+
+    setText("#coaching-type-label",t.coaching);
+
+    const coachingLabels=document.querySelectorAll('input[name="Tip coaching"]');
+
+    if(coachingLabels[0])
+      coachingLabels[0].parentElement.lastChild.textContent=" "+t.online;
+
+    if(coachingLabels[1])
+      coachingLabels[1].parentElement.lastChild.textContent=" "+t.fizic;
+
+    if(coachingLabels[2])
+      coachingLabels[2].parentElement.lastChild.textContent=" "+t.both;
+
+    setText('label[for="goal"]',t.goal);
+
+    setOptions(
+      document.getElementById("goal"),
+      [t.choose,t.muscle,t.lose,t.recomp,t.strength,t.fitness,t.other]
+    );
+
+    setLabel("goaltext",t.goaltext);
+
+    setLabel("experience",t.exp);
+
+    setOptions(
+      document.getElementById("experience"),
+      [t.choose,t.beginner,t.under6,t.six12,t.one2,t.over2]
+    );
+
+    setLabel("frequency",t.freq);
+
+    setOptions(
+      document.getElementById("frequency"),
+      [t.choose,t.two,t.three,t.four,t.five,t.sixplus]
+    );
+
+    const packLabel=[
+      ...document.querySelectorAll("label")
+    ].find(x=>x.textContent.trim()==="Ce pachet te interesează acum?");
+
+    if(packLabel) packLabel.textContent=t.pack;
+
+    const packLabels=document.querySelectorAll('input[name="Pachet dorit"]');
+    const vals=priceValues[lang];
+
+    packLabels.forEach((inp,i)=>{
+      inp.value=vals[i];
+
+      const lab=inp.closest("label");
+
+      if(lab)
+        lab.lastChild.textContent=" "+vals[i];
+    });
+
+    setLabel("why",t.why);
+    setLabel("coach",t.coach);
+
+    setOptions(
+      document.getElementById("coach"),
+      [t.choose,t.yes,t.no]
+    );
+
+    setLabel("extra",t.extra);
+
+    const consent=document.querySelector('label[for="consent"]');
+
+    if(consent)
+      consent.textContent=t.consent;
+
+    const submit=document.querySelector('button[type="submit"]');
+
+    if(submit)
+      submit.textContent=t.submit;
+
+    const back=document.querySelector(".back a");
+
+    if(back)
+      back.textContent=t.back;
+
+    const subject=document.querySelector('input[name="_subject"]');
+    const autoresponse=document.querySelector('input[name="_autoresponse"]');
+
+    if(subject)
+      subject.value=t.subject;
+
+    if(autoresponse)
+      autoresponse.value=t.autoresponse;
+
+    const next=document.querySelector('input[name="_next"]');
+
+    if(next)
+      next.value=
+        new URL(
+          "Vio_Bulz_Coaching_Multumesc.html",
+          window.location.href
+        ).href+"?lang="+lang;
+
+    localStorage.setItem("vb_lang",lang);
+  }
+
+  document.querySelectorAll("#lang-switcher button").forEach(b=>{
+    b.addEventListener("click",()=>{
+      apply(b.dataset.lang);
+    });
+  });
+
+  apply(
+    new URLSearchParams(location.search).get("lang")
+    || localStorage.getItem("vb_lang")
+    || "ro"
+  );
+
+})();
+</script>
+
+</body>
+</html>
